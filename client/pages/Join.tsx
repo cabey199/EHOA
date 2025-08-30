@@ -235,12 +235,70 @@ export default function Join() {
                       <SelectValue placeholder="Select your primary interest" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="membership">Membership</SelectItem>
-                      <SelectItem value="support">Support / Donation</SelectItem>
+                      <SelectItem value="basic">Membership</SelectItem>
+                      <SelectItem value="premium">Support / Donation</SelectItem>
                       <SelectItem value="volunteer">Volunteer</SelectItem>
-                      <SelectItem value="partnership">Partnership</SelectItem>
+                      <SelectItem value="partner">Partnership</SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="profilePhoto">Profile Photo (Optional)</Label>
+                  <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary/50 transition-colors">
+                    {formData.profilePhoto ? (
+                      <div className="space-y-2">
+                        <img
+                          src={formData.profilePhoto}
+                          alt="Profile preview"
+                          className="w-20 h-20 rounded-full mx-auto object-cover"
+                        />
+                        <div className="flex justify-center space-x-2">
+                          <Button
+                            type="button"
+                            variant="outline"
+                            size="sm"
+                            onClick={() => handleInputChange("profilePhoto", "")}
+                          >
+                            Remove
+                          </Button>
+                          <Button
+                            type="button"
+                            variant="outline"
+                            size="sm"
+                            onClick={() => {
+                              // Placeholder for file upload - will be implemented with backend
+                              const defaultPhoto = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face";
+                              handleInputChange("profilePhoto", defaultPhoto);
+                            }}
+                          >
+                            Change Photo
+                          </Button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="space-y-2">
+                        <Upload className="h-8 w-8 text-muted-foreground mx-auto" />
+                        <div>
+                          <Button
+                            type="button"
+                            variant="outline"
+                            onClick={() => {
+                              // Placeholder for file upload - will be implemented with backend
+                              const defaultPhoto = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face";
+                              handleInputChange("profilePhoto", defaultPhoto);
+                            }}
+                          >
+                            Upload Photo
+                          </Button>
+                          <p className="text-xs text-muted-foreground mt-2">
+                            Upload a profile photo for your member card<br />
+                            JPG, PNG up to 5MB
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 <div className="space-y-2">
