@@ -1,5 +1,46 @@
 import "./global.css";
-import { createRoot } from "react-dom/client";
-import TestApp from "./TestApp";
 
-createRoot(document.getElementById("root")!).render(<TestApp />);
+import { Toaster } from "@/components/ui/toaster";
+import { createRoot } from "react-dom/client";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import About from "./pages/About";
+import Join from "./pages/Join";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+
+const queryClient = new QueryClient();
+
+const App = () => {
+  try {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/join" element={<Join />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    );
+  } catch (error) {
+    return (
+      <div style={{ padding: '20px', color: 'red' }}>
+        <h1>Error loading EHOA app:</h1>
+        <pre>{String(error)}</pre>
+      </div>
+    );
+  }
+};
+
+createRoot(document.getElementById("root")!).render(<App />);
