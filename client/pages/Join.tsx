@@ -96,22 +96,16 @@ export default function Join() {
               Thank you for joining the Ethiopian Hiking Organizers Association. We've received your application and will be in touch soon.
             </p>
             
-            {/* Member ID Display */}
-            <Card className="bg-primary/5 border-primary/20 mb-8">
-              <CardHeader>
-                <CardTitle className="text-center text-primary">Your Member ID</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-center">
-                  <Badge variant="secondary" className="text-lg px-6 py-2 bg-primary text-primary-foreground">
-                    {memberId}
-                  </Badge>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    Please save this Member ID for your records. You'll receive a welcome email with more details soon.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Digital Member ID Card */}
+            <div className="mb-8">
+              <DigitalMemberCard
+                memberName={formData.name}
+                memberId={memberId}
+                membershipType={formData.interest as MembershipType || "basic"}
+                profilePhoto={formData.profilePhoto}
+                showQRCode={true}
+              />
+            </div>
 
             <div className="space-y-4">
               <p className="text-muted-foreground">
