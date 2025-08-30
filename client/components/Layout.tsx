@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mountain, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -27,7 +26,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="bg-white/95 backdrop-blur-md border-b border-border sticky top-0 z-50">
+      <nav className="bg-white/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -38,17 +37,16 @@ export default function Layout({ children }: LayoutProps) {
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-1">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={cn(
-                      "px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive(item.href)
-                        ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                    )}
+                        ? "text-primary bg-primary/10 shadow-sm"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -60,7 +58,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted"
+                className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
               >
                 {isMobileMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -74,19 +72,18 @@ export default function Layout({ children }: LayoutProps) {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-border">
+          <div className="md:hidden border-t border-border bg-white">
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    "block px-3 py-2 rounded-md text-base font-medium transition-colors",
+                  className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                     isActive(item.href)
                       ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                  )}
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -100,7 +97,7 @@ export default function Layout({ children }: LayoutProps) {
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="bg-muted/50 border-t border-border">
+      <footer className="bg-muted/30 border-t border-border">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -131,10 +128,11 @@ export default function Layout({ children }: LayoutProps) {
 
             <div>
               <h3 className="text-sm font-semibold text-foreground mb-4">Contact Info</h3>
-              <p className="text-sm text-muted-foreground">
-                Email: info@ehoa.org<br />
-                Telegram: @EHOAOfficial
-              </p>
+              <div className="text-sm text-muted-foreground space-y-1">
+                <p>Email: info@ehoa.org</p>
+                <p>Telegram: @EHOAOfficial</p>
+                <p>Addis Ababa, Ethiopia</p>
+              </div>
             </div>
           </div>
           
