@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Calendar, MapPin } from "lucide-react";
-import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
