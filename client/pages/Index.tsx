@@ -1,25 +1,12 @@
 export default function Index() {
   return (
-    <div style={{ padding: '20px', backgroundColor: '#f0f9f0' }}>
-      <h1 style={{ color: '#2d8f2d', fontSize: '48px', textAlign: 'center' }}>
+    <div className="min-h-screen bg-green-50">
+      <h1 className="text-4xl font-bold text-green-800 text-center py-20">
         EHOA - Ethiopian Hiking Organizers Association
       </h1>
-      <p style={{ fontSize: '18px', textAlign: 'center', marginTop: '20px' }}>
+      <p className="text-center text-lg text-green-700">
         Uniting Hiking Groups Across Ethiopia
       </p>
-      <div style={{ textAlign: 'center', marginTop: '30px' }}>
-        <button style={{ 
-          backgroundColor: '#37a837', 
-          color: 'white', 
-          padding: '15px 30px', 
-          fontSize: '16px',
-          border: 'none',
-          borderRadius: '8px',
-          cursor: 'pointer'
-        }}>
-          Join Our Community
-        </button>
-      </div>
     </div>
   );
 }
