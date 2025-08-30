@@ -58,7 +58,7 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         // EHOA Nature-inspired colors
-        nature: {
+        ehoa: {
           green: {
             50: "#f0f9f0",
             100: "#dcf2dc",
