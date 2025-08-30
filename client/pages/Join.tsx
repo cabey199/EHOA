@@ -16,6 +16,7 @@ interface FormData {
   phone: string;
   interest: string;
   message: string;
+  profilePhoto?: string;
 }
 
 export default function Join() {
