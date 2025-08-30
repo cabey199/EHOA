@@ -115,7 +115,7 @@ export default function Join() {
               <Button 
                 onClick={() => {
                   setIsSubmitted(false);
-                  setFormData({ name: "", email: "", phone: "", interest: "", message: "" });
+                  setFormData({ name: "", email: "", phone: "", interest: "", message: "", profilePhoto: undefined });
                   setMemberId("");
                 }}
                 variant="outline"
