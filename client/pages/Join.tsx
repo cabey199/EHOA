@@ -25,7 +25,8 @@ export default function Join() {
     email: "",
     phone: "",
     interest: "",
-    message: ""
+    message: "",
+    profilePhoto: undefined
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [memberId, setMemberId] = useState<string>("");
