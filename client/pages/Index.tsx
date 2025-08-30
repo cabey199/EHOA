@@ -50,7 +50,7 @@ export default function Index() {
   ];
 
   return (
-    <Layout>
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -188,6 +188,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-    </Layout>
+    </div>
   );
 }
