@@ -57,6 +57,45 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // EHOA Nature-inspired colors
+        nature: {
+          green: {
+            50: "#f0f9f0",
+            100: "#dcf2dc",
+            200: "#bae5ba",
+            300: "#8cd68c",
+            400: "#5cbf5c",
+            500: "#37a837",
+            600: "#2d8f2d",
+            700: "#247124",
+            800: "#1f5c1f",
+            900: "#1a4c1a",
+          },
+          brown: {
+            50: "#faf8f5",
+            100: "#f3eee7",
+            200: "#e6d8c7",
+            300: "#d4bd9f",
+            400: "#c19e75",
+            500: "#b38654",
+            600: "#a17348",
+            700: "#855d3e",
+            800: "#6d4c36",
+            900: "#5a402e",
+          },
+          sky: {
+            50: "#f0f9ff",
+            100: "#e0f2fe",
+            200: "#b9e6fe",
+            300: "#7cd4fd",
+            400: "#36bffa",
+            500: "#0ca5e8",
+            600: "#0284c7",
+            700: "#0369a1",
+            800: "#075985",
+            900: "#0c4a6e",
+          }
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
