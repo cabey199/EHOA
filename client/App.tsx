@@ -1,46 +1,32 @@
-import "./global.css";
-
-import { Toaster } from "@/components/ui/toaster";
 import { createRoot } from "react-dom/client";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Join from "./pages/Join";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
-
-const queryClient = new QueryClient();
 
 const App = () => {
-  try {
-    return (
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/join" element={<Join />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </QueryClientProvider>
-    );
-  } catch (error) {
-    return (
-      <div style={{ padding: '20px', color: 'red' }}>
-        <h1>Error loading EHOA app:</h1>
-        <pre>{String(error)}</pre>
+  return (
+    <div style={{ padding: '20px', backgroundColor: '#f0f9f0', minHeight: '100vh' }}>
+      <h1 style={{ color: '#2d8f2d', fontSize: '48px', textAlign: 'center' }}>
+        EHOA - Ethiopian Hiking Organizers Association
+      </h1>
+      <p style={{ fontSize: '18px', textAlign: 'center', marginTop: '20px' }}>
+        Uniting Hiking Groups Across Ethiopia
+      </p>
+      <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <button style={{
+          backgroundColor: '#37a837',
+          color: 'white',
+          padding: '15px 30px',
+          fontSize: '16px',
+          border: 'none',
+          borderRadius: '8px',
+          cursor: 'pointer'
+        }}>
+          Join Our Community
+        </button>
       </div>
-    );
-  }
+      <p style={{ textAlign: 'center', marginTop: '20px', color: '#666' }}>
+        Direct render test - bypassing all complex components
+      </p>
+    </div>
+  );
 };
 
 createRoot(document.getElementById("root")!).render(<App />);
