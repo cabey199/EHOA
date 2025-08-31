@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import DigitalMemberCard, { MembershipType } from "@/components/DigitalMemberCard";
-import { Users, Heart, Handshake, UserPlus, CheckCircle, Upload, X } from "lucide-react";
+import ImageUploadSlot from "@/components/ImageUploadSlot";
+import { Users, Heart, Handshake, UserPlus, CheckCircle } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -276,49 +277,19 @@ export default function Join() {
                 <label className="block text-sm font-medium text-foreground mb-2">
                   Profile Photo (Optional)
                 </label>
-                <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary/50 transition-colors">
-                  {formData.profilePhoto ? (
-                    <div className="space-y-4">
-                      <img 
-                        src={formData.profilePhoto} 
-                        alt="Profile preview" 
-                        className="w-24 h-24 rounded-full mx-auto object-cover"
-                      />
-                      <div className="flex justify-center space-x-3">
-                        <button 
-                          type="button"
-                          onClick={handlePhotoUpload}
-                          className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors duration-200"
-                        >
-                          Change Photo
-                        </button>
-                        <button 
-                          type="button"
-                          onClick={() => handleInputChange("profilePhoto", "")}
-                          className="bg-red-50 text-red-600 hover:bg-red-100 px-4 py-2 rounded-lg font-medium transition-colors duration-200"
-                        >
-                          <X className="h-4 w-4" />
-                        </button>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="space-y-4">
-                      <Upload className="h-12 w-12 text-muted-foreground mx-auto" />
-                      <div>
-                        <button 
-                          type="button"
-                          onClick={handlePhotoUpload}
-                          className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-                        >
-                          Upload Photo
-                        </button>
-                        <p className="text-xs text-muted-foreground mt-3">
-                          Upload a profile photo for your member card<br />
-                          JPG, PNG up to 5MB (Backend integration coming soon)
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                <div className="max-w-xs mx-auto">
+                  <ImageUploadSlot
+                    onImageSelect={(imageUrl) => handleInputChange("profilePhoto", imageUrl)}
+                    placeholder="Upload Profile Photo"
+                    height="h-40"
+                    initialImage={formData.profilePhoto}
+                    isDragAndDrop={true}
+                    className="border-border hover:border-primary/50"
+                  />
+                  <p className="text-xs text-muted-foreground mt-2 text-center">
+                    Upload a profile photo for your member card<br />
+                    Backend integration coming soon
+                  </p>
                 </div>
               </div>
 
