@@ -75,7 +75,7 @@ export default function Index() {
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Join the Ethiopian Hiking Organizers Association and connect with passionate hiking communities throughout our beautiful country.
           </p>
-          <Link to="/join">
+          <Link to="/join" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg">
               Join Our Community
               <ArrowRight className="ml-2 h-5 w-5 inline" />
@@ -115,7 +115,7 @@ export default function Index() {
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                 Today, we proudly bring together over 15 hiking organizer groups from all regions of Ethiopia, fostering collaboration, sharing knowledge, and creating unforgettable outdoor experiences for thousands of adventurers.
               </p>
-              <Link to="/about">
+              <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200">
                   Learn More About Us
                   <ArrowRight className="ml-2 h-4 w-4 inline" />
@@ -224,13 +224,13 @@ export default function Index() {
             Join our growing community of hiking enthusiasts and discover the wonders of Ethiopia's landscapes. Whether you're a beginner or an experienced hiker, there's a place for you in EHOA.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/join">
+            <Link to="/join" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105">
                 Become a Member
                 <ArrowRight className="ml-2 h-5 w-5 inline" />
               </button>
             </Link>
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <button className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
                 Get in Touch
               </button>
