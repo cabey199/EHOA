@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Calendar, MapPin, Heart, Shield, Award } from "lucide-react";
-import { useState } from "react";
 import Layout from "@/components/Layout";
-import ImageUploadSlot from "@/components/ImageUploadSlot";
 
 export default function Index() {
-  const [aboutImage, setAboutImage] = useState<string | undefined>(undefined);
-  const [galleryImages, setGalleryImages] = useState<Array<{id: number; src?: string; title: string}>>([]);
   const stats = [
     { icon: Users, label: "Hiking Groups", value: "15+" },
     { icon: Calendar, label: "Years Active", value: "2+" },
