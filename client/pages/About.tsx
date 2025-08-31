@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout";
-import ImageUploadSlot from "@/components/ImageUploadSlot";
 import { Users, Calendar, Target, Heart, MapPin, Award } from "lucide-react";
 import { useState } from "react";
 
