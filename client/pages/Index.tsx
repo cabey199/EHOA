@@ -87,7 +87,7 @@ export default function Index() {
             <span className="block text-accent">Across Ethiopia</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Join the Ethiopian Hiking Organizers Association and connect with passionate hiking communities throughout our beautiful country.
+            Join Ethiopia's first and only national association dedicated to hiking and camping. Connect with 15+ hiking organizer groups and discover the breathtaking landscapes of our homeland.
           </p>
           <Link to="/join" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg">
