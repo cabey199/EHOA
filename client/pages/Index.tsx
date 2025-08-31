@@ -210,7 +210,7 @@ export default function Index() {
             Ready to Start Your Adventure?
           </h2>
           <p className="text-lg mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Join our growing community of hiking enthusiasts and discover the wonders of Ethiopia's landscapes. Whether you're a beginner or an experienced hiker, there's a place for you in EHOA.
+            Join Ethiopia's premier hiking and camping association. Help us promote sustainable tourism, develop new trails, and support local communities while exploring the hidden gems of our beautiful country.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/join" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
