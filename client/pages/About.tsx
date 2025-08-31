@@ -1,16 +1,7 @@
 import Layout from "@/components/Layout";
 import { Users, Calendar, Target, Heart, MapPin, Award } from "lucide-react";
-import { useState } from "react";
 
 export default function About() {
-  const [leadershipImages, setLeadershipImages] = useState<{[key: string]: string}>({});
-
-  const handleLeadershipImageUpload = (leaderIndex: number, imageUrl: string) => {
-    setLeadershipImages(prev => ({
-      ...prev,
-      [leaderIndex]: imageUrl
-    }));
-  };
   const milestones = [
     {
       year: "2022",
@@ -281,48 +272,9 @@ export default function About() {
             {leadership.map((leader, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
                 <div className="mx-auto mb-4">
-                  {leadershipImages[index] ? (
-                    <div className="relative group">
-                      <img
-                        src={leadershipImages[index]}
-                        alt={leader.name}
-                        className="w-20 h-20 rounded-full object-cover mx-auto border-4 border-primary/20"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 rounded-full transition-colors duration-200 flex items-center justify-center">
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                          <button
-                            onClick={() => handleLeadershipImageUpload(index, "")}
-                            className="bg-red-500/90 hover:bg-red-500 text-white p-1 rounded-full shadow-lg transition-colors duration-200"
-                            title="Remove Image"
-                          >
-                            ×
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div
-                      className="w-20 h-20 mx-auto border-2 border-dashed border-primary/30 hover:border-primary/60 rounded-full cursor-pointer transition-all duration-200 flex items-center justify-center bg-gray-50 hover:bg-gray-100"
-                      onClick={() => {
-                        // Simulate image upload for demonstration
-                        const sampleImages = [
-                          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-                          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-                          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-                          "https://images.unsplash.com/photo-1494790108755-2616b612adf8?w=150&h=150&fit=crop&crop=face",
-                          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-                        ];
-                        const randomImage = sampleImages[Math.floor(Math.random() * sampleImages.length)];
-                        handleLeadershipImageUpload(index, randomImage);
-                      }}
-                      title="Click to upload photo"
-                    >
-                      <div className="text-center">
-                        <Users className="h-8 w-8 text-primary/60 mx-auto mb-1" />
-                        <span className="text-xs text-primary/60 font-medium">Upload</span>
-                      </div>
-                    </div>
-                  )}
+                  <div className="w-20 h-20 mx-auto bg-primary/10 rounded-full flex items-center justify-center border-2 border-dashed border-primary/30">
+                    <Users className="h-10 w-10 text-primary/60" />
+                  </div>
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{leader.name}</h3>
                 <p className="text-muted-foreground text-sm font-medium">{leader.position}</p>
