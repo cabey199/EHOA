@@ -5,7 +5,6 @@ import Layout from "@/components/Layout";
 import ImageUploadSlot from "@/components/ImageUploadSlot";
 
 export default function Index() {
-  const [heroImage, setHeroImage] = useState<string | undefined>(undefined);
   const [aboutImage, setAboutImage] = useState<string | undefined>(undefined);
   const [galleryImages, setGalleryImages] = useState<Array<{id: number; src?: string; title: string}>>([]);
   const stats = [
