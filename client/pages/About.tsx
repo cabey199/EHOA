@@ -302,15 +302,26 @@ export default function About() {
                       </div>
                     </div>
                   ) : (
-                    <div className="w-20 h-20 mx-auto">
-                      <ImageUploadSlot
-                        onImageSelect={(imageUrl) => handleLeadershipImageUpload(index, imageUrl)}
-                        placeholder={`Upload Photo`}
-                        height="h-20"
-                        className="border-dashed border-2 border-primary/30 hover:border-primary/60 rounded-full"
-                        isDragAndDrop={true}
-                        showRemoveButton={false}
-                      />
+                    <div
+                      className="w-20 h-20 mx-auto border-2 border-dashed border-primary/30 hover:border-primary/60 rounded-full cursor-pointer transition-all duration-200 flex items-center justify-center bg-gray-50 hover:bg-gray-100"
+                      onClick={() => {
+                        // Simulate image upload for demonstration
+                        const sampleImages = [
+                          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+                          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+                          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+                          "https://images.unsplash.com/photo-1494790108755-2616b612adf8?w=150&h=150&fit=crop&crop=face",
+                          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+                        ];
+                        const randomImage = sampleImages[Math.floor(Math.random() * sampleImages.length)];
+                        handleLeadershipImageUpload(index, randomImage);
+                      }}
+                      title="Click to upload photo"
+                    >
+                      <div className="text-center">
+                        <Users className="h-8 w-8 text-primary/60 mx-auto mb-1" />
+                        <span className="text-xs text-primary/60 font-medium">Upload</span>
+                      </div>
                     </div>
                   )}
                 </div>
