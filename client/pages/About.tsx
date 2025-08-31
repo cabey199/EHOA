@@ -1,7 +1,17 @@
 import Layout from "@/components/Layout";
+import ImageUploadSlot from "@/components/ImageUploadSlot";
 import { Users, Calendar, Target, Heart, MapPin, Award } from "lucide-react";
+import { useState } from "react";
 
 export default function About() {
+  const [leadershipImages, setLeadershipImages] = useState<{[key: string]: string}>({});
+
+  const handleLeadershipImageUpload = (leaderIndex: number, imageUrl: string) => {
+    setLeadershipImages(prev => ({
+      ...prev,
+      [leaderIndex]: imageUrl
+    }));
+  };
   const milestones = [
     {
       year: "2022",
@@ -271,8 +281,38 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {leadership.map((leader, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
-                <div className="bg-primary/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-10 w-10 text-primary" />
+                <div className="mx-auto mb-4">
+                  {leadershipImages[index] ? (
+                    <div className="relative group">
+                      <img
+                        src={leadershipImages[index]}
+                        alt={leader.name}
+                        className="w-20 h-20 rounded-full object-cover mx-auto border-4 border-primary/20"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 rounded-full transition-colors duration-200 flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                          <button
+                            onClick={() => handleLeadershipImageUpload(index, "")}
+                            className="bg-red-500/90 hover:bg-red-500 text-white p-1 rounded-full shadow-lg transition-colors duration-200"
+                            title="Remove Image"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="w-20 h-20 mx-auto">
+                      <ImageUploadSlot
+                        onImageSelect={(imageUrl) => handleLeadershipImageUpload(index, imageUrl)}
+                        placeholder={`Upload Photo`}
+                        height="h-20"
+                        className="border-dashed border-2 border-primary/30 hover:border-primary/60 rounded-full"
+                        isDragAndDrop={true}
+                        showRemoveButton={false}
+                      />
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{leader.name}</h3>
                 <p className="text-muted-foreground text-sm font-medium">{leader.position}</p>
