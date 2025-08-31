@@ -66,40 +66,6 @@ export default function Join() {
     handleInputChange("profilePhoto", randomPhoto);
   };
 
-  const supportOptions = [
-    {
-      icon: UserPlus,
-      type: "basic" as MembershipType,
-      title: "Basic Membership",
-      description: "Join our hiking community and participate in events",
-      benefits: ["Access to all events", "Community forum access", "Monthly newsletter", "Basic safety support"],
-      price: "Free"
-    },
-    {
-      icon: Heart,
-      type: "premium" as MembershipType,
-      title: "Premium Support",
-      description: "Support our mission through donations and get exclusive benefits",
-      benefits: ["All basic benefits", "Priority event registration", "Exclusive gear discounts", "Annual appreciation gift"],
-      price: "$25/year"
-    },
-    {
-      icon: Users,
-      type: "volunteer" as MembershipType,
-      title: "Volunteer",
-      description: "Help organize events and support the hiking community",
-      benefits: ["All basic benefits", "Volunteer training", "Leadership opportunities", "Recognition certificate"],
-      price: "Free"
-    },
-    {
-      icon: Handshake,
-      type: "partner" as MembershipType,
-      title: "Partnership",
-      description: "Partner with EHOA as an organization or business",
-      benefits: ["Brand visibility", "Event collaboration", "Networking opportunities", "Partnership certificate"],
-      price: "Contact us"
-    }
-  ];
 
   if (isSubmitted) {
     return (
@@ -113,7 +79,7 @@ export default function Join() {
               Welcome to EHOA!
             </h1>
             <p className="text-muted-foreground mb-12 text-lg">
-              Thank you for joining the Ethiopian Hiking Organizers Association. We've received your application and will be in touch soon.
+              Thank you for joining our mission to promote hiking, trekking and camping culture in Ethiopia! We've received your application and will be in touch soon.
             </p>
             
             {/* Digital Member ID Card */}
@@ -134,7 +100,8 @@ export default function Join() {
                 <p>✅ Your membership application has been received</p>
                 <p>✅ You'll receive a welcome email within 24 hours</p>
                 <p>✅ Our team will contact you via email or Telegram within 2-3 business days</p>
-                <p>✅ You'll get access to our member portal and upcoming events</p>
+                <p>✅ You'll learn about upcoming events and ways to contribute to our mission</p>
+                <p>✅ You'll be connected with Ethiopia's hiking and camping community</p>
               </div>
             </div>
 
