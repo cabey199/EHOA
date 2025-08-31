@@ -139,18 +139,22 @@ export default function Join() {
             </div>
 
             <div className="mt-8 space-x-4">
-              <button 
+              <button
                 onClick={() => {
                   setIsSubmitted(false);
                   setFormData({ name: "", email: "", phone: "", interest: "basic", message: "", profilePhoto: undefined });
                   setMemberId("");
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
                 Submit Another Application
               </button>
-              <button 
-                onClick={() => window.location.href = "/"}
+              <button
+                onClick={() => {
+                  window.location.href = "/";
+                  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+                }}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
                 Return to Homepage
