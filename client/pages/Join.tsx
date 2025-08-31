@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import DigitalMemberCard, { MembershipType } from "@/components/DigitalMemberCard";
-import ImageUploadSlot from "@/components/ImageUploadSlot";
-import { Users, Heart, Handshake, UserPlus, CheckCircle } from "lucide-react";
+import { Users, Heart, Handshake, UserPlus, CheckCircle, User } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -271,17 +270,15 @@ export default function Join() {
                   Profile Photo (Optional)
                 </label>
                 <div className="max-w-xs mx-auto">
-                  <ImageUploadSlot
-                    onImageSelect={(imageUrl) => handleInputChange("profilePhoto", imageUrl)}
-                    placeholder="Upload Profile Photo"
-                    height="h-40"
-                    initialImage={formData.profilePhoto}
-                    isDragAndDrop={true}
-                    className="border-border hover:border-primary/50"
-                  />
+                  <div className="h-40 border-2 border-dashed border-border rounded-lg flex items-center justify-center bg-gray-50">
+                    <div className="text-center">
+                      <User className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
+                      <p className="text-sm text-muted-foreground">Profile Photo Area</p>
+                      <p className="text-xs text-muted-foreground mt-1">Add via Design Mode</p>
+                    </div>
+                  </div>
                   <p className="text-xs text-muted-foreground mt-2 text-center">
-                    Upload a profile photo for your member card<br />
-                    Backend integration coming soon
+                    Add your profile photo using Builder.io's design interface
                   </p>
                 </div>
               </div>
