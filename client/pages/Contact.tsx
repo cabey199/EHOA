@@ -129,12 +129,18 @@ export default function Contact() {
                 <p className="font-semibold text-foreground mb-3">{method.details}</p>
                 <p className="text-muted-foreground text-sm mb-6">{method.description}</p>
                 {method.action && (
-                  <button 
-                    onClick={() => window.open(method.action, '_blank')}
+                  <button
+                    onClick={() => {
+                      if (method.title === "Email" || method.title === "Emergency Line") {
+                        window.location.href = method.action;
+                      } else {
+                        window.open(method.action, '_blank');
+                      }
+                    }}
                     className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors duration-200 w-full"
                   >
-                    {method.title === "Email" ? "Send Email" : 
-                     method.title === "Telegram" ? "Open Telegram" : 
+                    {method.title === "Email" ? "Send Email" :
+                     method.title === "Telegram" ? "Open Telegram" :
                      method.title === "Emergency Line" ? "Call Now" : "Contact"}
                   </button>
                 )}
