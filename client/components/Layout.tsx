@@ -110,7 +110,7 @@ export default function Layout({ children }: LayoutProps) {
                 <span className="text-lg font-bold text-foreground">EHOA</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                Ethiopian Hiking Organizers Association - Uniting hiking groups across Ethiopia since 2022.
+                Ethiopian Hiking Organizers Association - The first and only national association dedicated to hiking and camping in Ethiopia, established January 18, 2022 G.C.
               </p>
             </div>
             
