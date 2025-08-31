@@ -12,18 +12,18 @@ export default function Index() {
   const features = [
     {
       icon: Heart,
-      title: "Community Focused",
-      description: "Building strong connections between hiking enthusiasts across Ethiopia"
+      title: "Community",
+      description: "Supporting and empowering local communities through tourism and charitable activities"
     },
     {
       icon: Shield,
-      title: "Safety First",
-      description: "Promoting safe hiking practices and emergency preparedness"
+      title: "Sustainability",
+      description: "Commitment to preserving nature and promoting eco-friendly practices"
     },
     {
       icon: Award,
-      title: "Excellence",
-      description: "Maintaining high standards in outdoor experiences and organization"
+      title: "Adventure",
+      description: "Encouraging exploration and discovery of Ethiopia's hidden gems"
     }
   ];
 
@@ -124,10 +124,10 @@ export default function Index() {
                 About Ethiopian Hiking Organizers Association
               </h2>
               <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                Founded on January 18, 2022, by 10 passionate hiking enthusiasts, EHOA was born from a vision to unite the diverse hiking communities across Ethiopia. Our mission is to create a network that connects hiking organizers, promotes sustainable outdoor practices, and showcases the natural beauty of our homeland.
+                The Ethiopian Hiking Organizers Association (EHOA) was officially established on January 18, 2022 G.C. by 10 pioneering founding members, representing a collective of 15 dedicated hiking organizer groups across Ethiopia. EHOA is the first and only national association dedicated to hiking and camping in Ethiopia.
               </p>
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                Today, we proudly bring together over 15 hiking organizer groups from all regions of Ethiopia, fostering collaboration, sharing knowledge, and creating unforgettable outdoor experiences for thousands of adventurers.
+                We were formed to fill a significant gap in the Ethiopian tourism landscape, specifically focusing on hiking and camping activities. Our association brings together a vibrant community of outdoor enthusiasts and professionals committed to promoting the benefits and joys of hiking and camping throughout Ethiopia.
               </p>
               <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200">
@@ -152,10 +152,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose EHOA
+              Our Core Values
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We're committed to creating the best hiking experiences while building strong, safe communities
+              Our activities are guided by principles of inclusivity, environmental stewardship, and community empowerment
             </p>
           </div>
           
