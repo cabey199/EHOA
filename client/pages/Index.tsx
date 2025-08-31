@@ -4,9 +4,9 @@ import Layout from "@/components/Layout";
 
 export default function Index() {
   const stats = [
-    { icon: Users, label: "Hiking Groups", value: "15+" },
-    { icon: Calendar, label: "Years Active", value: "2+" },
-    { icon: MapPin, label: "Regions Covered", value: "All Ethiopia" }
+    { icon: Users, label: "Hiking Organizer Groups", value: "15+" },
+    { icon: Calendar, label: "Founded", value: "Jan 18, 2022" },
+    { icon: MapPin, label: "Founding Members", value: "10" }
   ];
 
   const features = [
