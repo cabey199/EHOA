@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mountain, Menu, X } from "lucide-react";
 import { useState } from "react";
+import ImageUploadSlot from "./ImageUploadSlot";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -8,6 +9,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [logoImage, setLogoImage] = useState<string | undefined>(undefined);
   const location = useLocation();
 
   const navigation = [
@@ -31,7 +33,26 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <Mountain className="h-8 w-8 text-primary" />
+              {logoImage ? (
+                <img src={logoImage} alt="EHOA Logo" className="h-8 w-8 object-cover rounded" />
+              ) : (
+                <div className="relative group">
+                  <Mountain className="h-8 w-8 text-primary" />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 rounded transition-colors duration-200 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        // Simulate logo upload
+                        const logoUrl = "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=32&h=32&fit=crop";
+                        setLogoImage(logoUrl);
+                      }}
+                      className="text-xs text-primary bg-white px-1 py-0.5 rounded text-[10px] font-medium"
+                    >
+                      Upload
+                    </button>
+                  </div>
+                </div>
+              )}
               <span className="text-xl font-bold text-foreground">EHOA</span>
             </Link>
 
@@ -102,7 +123,11 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Mountain className="h-6 w-6 text-primary" />
+                {logoImage ? (
+                  <img src={logoImage} alt="EHOA Logo" className="h-6 w-6 object-cover rounded" />
+                ) : (
+                  <Mountain className="h-6 w-6 text-primary" />
+                )}
                 <span className="text-lg font-bold text-foreground">EHOA</span>
               </div>
               <p className="text-muted-foreground text-sm">
