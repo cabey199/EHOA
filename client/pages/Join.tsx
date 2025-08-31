@@ -140,7 +140,7 @@ export default function Join() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Join & Support EHOA
+              Join EHOA's Mission
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Join our mission to promote hiking, trekking and camping culture in Ethiopia! Whether you're an individual, an organization, or a business, there are many ways to get involved.
@@ -197,9 +197,9 @@ export default function Join() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-foreground text-center mb-6">Join EHOA Today</h2>
+            <h2 className="text-2xl font-bold text-foreground text-center mb-6">Become a Member</h2>
             <p className="text-muted-foreground text-center mb-8">
-              Fill out the form below and we'll get in touch with you soon
+              Join our mission to make Ethiopia a top destination for outdoor adventure. Fill out the form below and we'll get in touch with you soon.
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-6">
