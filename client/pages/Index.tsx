@@ -31,26 +31,44 @@ export default function Index() {
     }
   ];
 
-  // Initialize gallery with empty slots
-  useState(() => {
-    const initialGallery = [
-      { id: 1, title: "Simien Mountains Trek" },
-      { id: 2, title: "Camping Adventure" },
-      { id: 3, title: "Bale Mountains" },
-      { id: 4, title: "Highland Trails" },
-      { id: 5, title: "Dawn Expeditions" },
-      { id: 6, title: "Summit Success" }
-    ];
-    setGalleryImages(initialGallery);
-  }, []);
-
-  const handleGalleryImageUpload = (imageId: number, imageUrl: string) => {
-    setGalleryImages(prev =>
-      prev.map(img =>
-        img.id === imageId ? { ...img, src: imageUrl } : img
-      )
-    );
-  };
+  const galleryImages = [
+    {
+      id: 1,
+      src: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&h=400&fit=crop",
+      alt: "Mountain hiking in Ethiopia",
+      title: "Simien Mountains Trek"
+    },
+    {
+      id: 2,
+      src: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop",
+      alt: "Group camping under stars",
+      title: "Camping Adventure"
+    },
+    {
+      id: 3,
+      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop",
+      alt: "Mountain landscape in Ethiopia",
+      title: "Bale Mountains"
+    },
+    {
+      id: 4,
+      src: "https://images.unsplash.com/photo-1486022069284-348e03132178?w=600&h=400&fit=crop",
+      alt: "Hiking trail through mountains",
+      title: "Highland Trails"
+    },
+    {
+      id: 5,
+      src: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5a?w=600&h=400&fit=crop",
+      alt: "Sunrise over Ethiopian mountains",
+      title: "Dawn Expeditions"
+    },
+    {
+      id: 6,
+      src: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&h=400&fit=crop",
+      alt: "Hikers on mountain peak",
+      title: "Summit Success"
+    }
+  ];
 
   return (
     <Layout>
@@ -173,32 +191,16 @@ export default function Index() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image) => (
-              <div key={image.id} className="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-                {image.src ? (
-                  <>
-                    <img
-                      src={image.src}
-                      alt={image.title}
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-white font-semibold text-lg drop-shadow-lg">{image.title}</h3>
-                    </div>
-                  </>
-                ) : (
-                  <div className="relative">
-                    <ImageUploadSlot
-                      onImageSelect={(imageUrl) => handleGalleryImageUpload(image.id, imageUrl)}
-                      placeholder={`Upload ${image.title}`}
-                      height="h-64"
-                      showRemoveButton={false}
-                    />
-                    <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
-                      <h3 className="text-muted-foreground font-semibold text-sm">{image.title}</h3>
-                    </div>
-                  </div>
-                )}
+              <div key={image.id} className="relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-white font-semibold text-lg drop-shadow-lg">{image.title}</h3>
+                </div>
               </div>
             ))}
           </div>
