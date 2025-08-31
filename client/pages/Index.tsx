@@ -207,10 +207,10 @@ export default function Index() {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start Your Adventure?
+            Ready to Join Our Mission?
           </h2>
           <p className="text-lg mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Join Ethiopia's premier hiking and camping association. Help us promote sustainable tourism, develop new trails, and support local communities while exploring the hidden gems of our beautiful country.
+            Whether you're an individual, organization, or business, join our mission to promote hiking, trekking and camping culture in Ethiopia. Together, we can make Ethiopia a top destination for outdoor adventure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/join" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
