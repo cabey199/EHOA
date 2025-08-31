@@ -123,20 +123,11 @@ export default function Index() {
               </Link>
             </div>
             <div className="relative">
-              {aboutImage ? (
-                <img
-                  src={aboutImage}
-                  alt="Ethiopian mountain landscape"
-                  className="rounded-lg shadow-xl w-full h-[500px] object-cover"
-                />
-              ) : (
-                <ImageUploadSlot
-                  onImageSelect={setAboutImage}
-                  placeholder="Upload About Section Image"
-                  height="h-[500px]"
-                  className="shadow-xl"
-                />
-              )}
+              <img
+                src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop"
+                alt="Ethiopian mountain landscape"
+                className="rounded-lg shadow-xl w-full h-[500px] object-cover"
+              />
             </div>
           </div>
         </div>
