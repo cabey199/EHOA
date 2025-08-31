@@ -8,7 +8,7 @@ interface FormData {
   name: string;
   email: string;
   phone: string;
-  interest: MembershipType;
+  participantType: string;
   message: string;
   profilePhoto?: string;
 }
@@ -18,7 +18,7 @@ export default function Join() {
     name: "",
     email: "",
     phone: "",
-    interest: "basic",
+    participantType: "individual",
     message: "",
     profilePhoto: undefined
   });
@@ -122,7 +122,7 @@ export default function Join() {
               <DigitalMemberCard
                 memberName={formData.name}
                 memberId={memberId}
-                membershipType={formData.interest}
+                membershipType="basic"
                 profilePhoto={formData.profilePhoto}
                 showQRCode={true}
               />
@@ -142,7 +142,7 @@ export default function Join() {
               <button
                 onClick={() => {
                   setIsSubmitted(false);
-                  setFormData({ name: "", email: "", phone: "", interest: "basic", message: "", profilePhoto: undefined });
+                  setFormData({ name: "", email: "", phone: "", participantType: "individual", message: "", profilePhoto: undefined });
                   setMemberId("");
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
@@ -176,47 +176,52 @@ export default function Join() {
               Join & Support EHOA
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Become part of Ethiopia's largest hiking community and help us unite adventurers across the country.
+              Join our mission to promote hiking, trekking and camping culture in Ethiopia! Whether you're an individual, an organization, or a business, there are many ways to get involved.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Support Options */}
+      {/* Ways to Get Involved */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Choose Your Membership</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Ways to Get Involved</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Select the membership type that best fits your goals and level of involvement
+              From participating in our events to supporting our projects, together we can make Ethiopia a top destination for outdoor adventure
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {supportOptions.map((option, index) => (
-              <div 
-                key={index} 
-                className={`bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border-2 ${
-                  formData.interest === option.type ? 'border-primary shadow-md' : 'border-transparent'
-                }`}
-                onClick={() => handleInputChange("interest", option.type)}
-              >
-                <div className="text-center">
-                  <option.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{option.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">{option.description}</p>
-                  <div className="text-lg font-bold text-primary mb-4">{option.price}</div>
-                  <ul className="text-left space-y-2">
-                    {option.benefits.map((benefit, idx) => (
-                      <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div className="text-center">
+                <UserPlus className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-foreground mb-4">As an Individual</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Join our hiking and camping events, participate in trail development projects, and connect with like-minded outdoor enthusiasts across Ethiopia.
+                </p>
               </div>
-            ))}
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div className="text-center">
+                <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-foreground mb-4">As an Organization</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Partner with us to organize group events, support community-based tourism initiatives, and contribute to sustainable hiking practices.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div className="text-center">
+                <Handshake className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-foreground mb-4">As a Business</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Support our mission through sponsorships, equipment partnerships, or by providing services that enhance the hiking experience in Ethiopia.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -278,6 +283,23 @@ export default function Join() {
               </div>
 
               <div>
+                <label htmlFor="participantType" className="block text-sm font-medium text-foreground mb-2">
+                  Joining as *
+                </label>
+                <select
+                  id="participantType"
+                  value={formData.participantType}
+                  onChange={(e) => handleInputChange("participantType", e.target.value)}
+                  required
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                >
+                  <option value="individual">Individual</option>
+                  <option value="organization">Organization</option>
+                  <option value="business">Business</option>
+                </select>
+              </div>
+
+              <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
                   Profile Photo (Optional)
                 </label>
@@ -305,7 +327,7 @@ export default function Join() {
                   id="message"
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
-                  placeholder="Tell us more about your interest in EHOA, hiking experience, or how you'd like to get involved..."
+                  placeholder="Tell us about your interest in EHOA, hiking experience, and how you'd like to contribute to our mission..."
                   rows={4}
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none"
                 />
