@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mountain, Menu, X } from "lucide-react";
 import { useState } from "react";
-import ImageUploadSlot from "./ImageUploadSlot";
 
 interface LayoutProps {
   children: React.ReactNode;
