@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Calendar, MapPin, Heart, Shield, Award } from "lucide-react";
+import { useState } from "react";
 import Layout from "@/components/Layout";
+import ImageUploadSlot from "@/components/ImageUploadSlot";
 
 export default function Index() {
+  const [heroImage, setHeroImage] = useState<string | undefined>(undefined);
+  const [aboutImage, setAboutImage] = useState<string | undefined>(undefined);
   const stats = [
     { icon: Users, label: "Hiking Groups", value: "15+" },
     { icon: Calendar, label: "Years Active", value: "2+" },
@@ -70,15 +74,32 @@ export default function Index() {
     <Layout>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 z-0">
+          {heroImage ? (
+            <>
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `url('${heroImage}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+              </div>
+              <div className="absolute inset-0 bg-black/40"></div>
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
+              <div className="w-full max-w-2xl mx-auto px-4">
+                <ImageUploadSlot
+                  onImageSelect={setHeroImage}
+                  placeholder="Upload Hero Background Image"
+                  height="h-96"
+                  className="border-white/30 bg-white/10 backdrop-blur-sm"
+                />
+              </div>
+            </div>
+          )}
         </div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
@@ -137,11 +158,20 @@ export default function Index() {
               </Link>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop"
-                alt="Ethiopian mountain landscape"
-                className="rounded-lg shadow-xl w-full h-[500px] object-cover"
-              />
+              {aboutImage ? (
+                <img
+                  src={aboutImage}
+                  alt="Ethiopian mountain landscape"
+                  className="rounded-lg shadow-xl w-full h-[500px] object-cover"
+                />
+              ) : (
+                <ImageUploadSlot
+                  onImageSelect={setAboutImage}
+                  placeholder="Upload About Section Image"
+                  height="h-[500px]"
+                  className="shadow-xl"
+                />
+              )}
             </div>
           </div>
         </div>
