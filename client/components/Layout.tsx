@@ -42,6 +42,7 @@ export default function Layout({ children }: LayoutProps) {
                   <Link
                     key={item.name}
                     to={item.href}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive(item.href)
                         ? "text-primary bg-primary/10 shadow-sm"
@@ -78,7 +79,10 @@ export default function Layout({ children }: LayoutProps) {
                 <Link
                   key={item.name}
                   to={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
                   className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                     isActive(item.href)
                       ? "text-primary bg-primary/10"
@@ -117,6 +121,7 @@ export default function Layout({ children }: LayoutProps) {
                   <li key={item.name}>
                     <Link
                       to={item.href}
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {item.name}
