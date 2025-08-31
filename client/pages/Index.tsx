@@ -57,32 +57,15 @@ export default function Index() {
     <Layout>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          {heroImage ? (
-            <>
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `url('${heroImage}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-              </div>
-              <div className="absolute inset-0 bg-black/40"></div>
-            </>
-          ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
-              <div className="w-full max-w-2xl mx-auto px-4">
-                <ImageUploadSlot
-                  onImageSelect={setHeroImage}
-                  placeholder="Upload Hero Background Image"
-                  height="h-96"
-                  className="border-white/30 bg-white/10 backdrop-blur-sm"
-                />
-              </div>
-            </div>
-          )}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
