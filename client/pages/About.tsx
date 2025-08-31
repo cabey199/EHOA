@@ -37,25 +37,61 @@ export default function About() {
 
   const values = [
     {
-      icon: Users,
-      title: "Unity",
-      description: "Bringing together diverse hiking communities across Ethiopia under one shared vision of adventure and conservation"
-    },
-    {
       icon: Heart,
       title: "Sustainability",
-      description: "Promoting responsible hiking practices that preserve Ethiopia's natural beauty for future generations"
+      description: "Commitment to preserving nature and promoting eco-friendly practices"
+    },
+    {
+      icon: Users,
+      title: "Community",
+      description: "Supporting and empowering local communities through tourism"
     },
     {
       icon: Target,
-      title: "Excellence",
-      description: "Maintaining high standards in organization, safety protocols, and creating unforgettable outdoor experiences"
+      title: "Adventure",
+      description: "Encouraging exploration and discovery of Ethiopia's hidden gems"
     },
     {
       icon: Award,
-      title: "Community",
-      description: "Creating lasting bonds and shared memories through outdoor adventures and mutual support"
+      title: "Inclusivity",
+      description: "Ensuring hiking and camping activities are accessible to all"
     }
+  ];
+
+  const objectives = [
+    "Promoting Hiking and Camping Activities: Raising awareness and encouraging more people to participate",
+    "Discovering New Travel Destinations: Identifying and promoting new hiking destinations across Ethiopia",
+    "Developing New Hiking Trails: Creating and maintaining safe and enjoyable hiking trails",
+    "Enhancing Existing Destinations: Improving and promoting already popular hiking spots",
+    "Promoting Community-Based Tourism: Supporting sustainable tourism that benefits local communities",
+    "Supporting Local Communities and Charity Work: Engaging in charitable activities that uplift local communities"
+  ];
+
+  const programs = [
+    {
+      title: "Skill Acquisition Workshops",
+      description: "Training programs for local guides and hiking enthusiasts"
+    },
+    {
+      title: "Internships",
+      description: "Opportunities for young professionals to gain experience in the tourism and outdoor adventure sector"
+    },
+    {
+      title: "Hiking Trails Development",
+      description: "Initiatives focused on developing new and enhancing existing trails"
+    },
+    {
+      title: "Community-Based Tourism Projects",
+      description: "Collaborations with local communities to create sustainable tourism models"
+    }
+  ];
+
+  const leadership = [
+    { position: "President", name: "Misiker Kebede" },
+    { position: "Vice President", name: "Temesgen Adugna" },
+    { position: "PR Manager", name: "Mikiyas Tetemke" },
+    { position: "Finance Manager", name: "Thomas Girma" },
+    { position: "Secretary General", name: "To be announced" }
   ];
 
   const achievements = [
@@ -96,7 +132,7 @@ export default function About() {
                     Mission
                   </h3>
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    To unite and support hiking organizer groups across Ethiopia, fostering collaboration, promoting sustainable outdoor practices, and creating memorable adventures that showcase the natural beauty of our homeland while building strong, safe communities.
+                    To promote, develop, and sustain hiking and camping activities in Ethiopia by discovering new trails, enhancing existing ones, and supporting local communities through tourism and charity work.
                   </p>
                 </div>
                 <div>
@@ -105,16 +141,16 @@ export default function About() {
                     Vision
                   </h3>
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    To be the leading association that connects all hiking communities in Ethiopia, making outdoor adventures accessible, safe, and environmentally responsible for current and future generations of adventurers.
+                    To position Ethiopia as a leading hiking and camping destination in Africa, recognized for its breathtaking landscapes, well-developed trails, and community-focused tourism.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center">
                     <MapPin className="h-6 w-6 text-ehoa-brown-600 mr-3" />
-                    Goal
+                    Ethos
                   </h3>
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    Our primary goal is to unite 15+ hiking organizer groups across Ethiopia, providing them with resources, support, and a platform for collaboration, knowledge sharing, and coordinated adventures.
+                    We believe in sustainable tourism that respects and uplifts the communities and natural environments we interact with. Our activities are guided by principles of inclusivity, environmental stewardship, and community empowerment.
                   </p>
                 </div>
               </div>
@@ -226,7 +262,7 @@ export default function About() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-muted-foreground text-lg leading-relaxed mb-12">
-                EHOA was established on <strong className="text-foreground">January 18, 2022</strong>, by 10 dedicated founding members who shared a common vision of uniting Ethiopia's hiking communities. Their collective experience spanning over 50 years of outdoor adventures and passion for Ethiopia's natural landscapes laid the foundation for what has become a thriving network of adventurers across the country.
+                EHOA was established on <strong className="text-foreground">January 18, 2022 G.C.</strong>, by 10 pioneering founding members representing a collective of 15 dedicated hiking organizer groups. As the first and only national association dedicated to hiking and camping in Ethiopia, we were formed to fill a significant gap in the Ethiopian tourism landscape, specifically focusing on hiking and camping activities.
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-3xl mx-auto">
