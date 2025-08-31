@@ -31,7 +31,9 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <Mountain className="h-8 w-8 text-primary" />
+              <div className="w-8 h-8 bg-primary/10 rounded border-2 border-dashed border-primary/30 flex items-center justify-center">
+                <span className="text-xs text-primary/60 font-medium">Logo</span>
+              </div>
               <span className="text-xl font-bold text-foreground">EHOA</span>
             </Link>
 
@@ -106,7 +108,9 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Mountain className="h-6 w-6 text-primary" />
+                <div className="w-6 h-6 bg-primary/10 rounded border border-dashed border-primary/30 flex items-center justify-center">
+                  <span className="text-[8px] text-primary/60 font-medium">Logo</span>
+                </div>
                 <span className="text-lg font-bold text-foreground">EHOA</span>
               </div>
               <p className="text-muted-foreground text-sm">
