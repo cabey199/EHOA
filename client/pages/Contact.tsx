@@ -2,12 +2,6 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Mail, MessageCircle, MapPin, Clock, CheckCircle, Phone } from "lucide-react";
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
