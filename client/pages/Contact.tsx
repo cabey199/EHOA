@@ -286,17 +286,6 @@ export default function Contact() {
                 </p>
               </div>
 
-              {/* Emergency Contact */}
-              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-red-800 mb-3">Emergency Contact</h3>
-                <p className="text-red-700 text-sm mb-3">
-                  For hiking emergencies or urgent safety concerns:
-                </p>
-                <p className="font-semibold text-red-800">Emergency Hotline: +251 911 123 456</p>
-                <p className="text-xs text-red-600 mt-2">
-                  Available 24/7 for emergencies only
-                </p>
-              </div>
             </div>
           </div>
         </div>
