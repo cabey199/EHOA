@@ -13,7 +13,7 @@ interface FormData {
 }
 
 export default function Join() {
-  const [formData, setFormData] = useState<FormData>({
+  const [joinFormData, setJoinFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -28,29 +28,54 @@ export default function Join() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Generate a unique member ID (placeholder - will be handled by backend later)
+
+    // Generate a unique member ID
     const generateMemberId = () => {
       const year = new Date().getFullYear();
       const randomNum = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
       return `EHOA-${year}-${randomNum}`;
     };
 
-    // Simulate form submission
-    setTimeout(() => {
-      const newMemberId = generateMemberId();
-      setMemberId(newMemberId);
-      setIsSubmitted(true);
-      setIsSubmitting(false);
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    formData.append('_subject', 'New EHOA Membership Application');
 
-      // TODO: Backend integration - send form data to email/Telegram
-      console.log("Form submitted:", formData);
-      console.log("Generated Member ID:", newMemberId);
-    }, 1500);
+    // Store form data for card display
+    const formObject = Object.fromEntries(formData.entries());
+    setJoinFormData(prev => ({
+      ...prev,
+      name: formObject.name as string,
+      email: formObject.email as string,
+      phone: formObject.phone as string,
+      participantType: formObject.participantType as string,
+      message: formObject.message as string
+    }));
+
+    try {
+      const response = await fetch('https://formspree.io/f/mjkeoebw', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const newMemberId = generateMemberId();
+        setMemberId(newMemberId);
+        setIsSubmitted(true);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting join form:', error);
+      alert('There was an error submitting your application. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: keyof FormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setJoinFormData(prev => ({ ...prev, [field]: value }));
   };
 
   const handlePhotoUpload = () => {
@@ -85,10 +110,10 @@ export default function Join() {
             <div className="mb-12">
               <h2 className="text-2xl font-semibold text-foreground mb-6">Your Digital Member Card</h2>
               <DigitalMemberCard
-                memberName={formData.name}
+                memberName={joinFormData.name}
                 memberId={memberId}
                 membershipType="basic"
-                profilePhoto={formData.profilePhoto}
+                profilePhoto={joinFormData.profilePhoto}
                 showQRCode={true}
               />
             </div>
@@ -108,7 +133,7 @@ export default function Join() {
               <button
                 onClick={() => {
                   setIsSubmitted(false);
-                  setFormData({ name: "", email: "", phone: "", participantType: "individual", message: "", profilePhoto: undefined });
+                  setJoinFormData({ name: "", email: "", phone: "", participantType: "individual", message: "", profilePhoto: undefined });
                   setMemberId("");
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
@@ -209,9 +234,8 @@ export default function Join() {
                   </label>
                   <input
                     id="name"
+                    name="name"
                     type="text"
-                    value={formData.name}
-                    onChange={(e) => handleInputChange("name", e.target.value)}
                     required
                     placeholder="Enter your full name"
                     className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
@@ -223,9 +247,8 @@ export default function Join() {
                   </label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
                     required
                     placeholder="your.email@example.com"
                     className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
@@ -239,9 +262,8 @@ export default function Join() {
                 </label>
                 <input
                   id="phone"
+                  name="phone"
                   type="tel"
-                  value={formData.phone}
-                  onChange={(e) => handleInputChange("phone", e.target.value)}
                   required
                   placeholder="+251 912 345 678"
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
@@ -254,8 +276,7 @@ export default function Join() {
                 </label>
                 <select
                   id="participantType"
-                  value={formData.participantType}
-                  onChange={(e) => handleInputChange("participantType", e.target.value)}
+                  name="participantType"
                   required
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                 >
@@ -289,8 +310,7 @@ export default function Join() {
                 </label>
                 <textarea
                   id="message"
-                  value={formData.message}
-                  onChange={(e) => handleInputChange("message", e.target.value)}
+                  name="message"
                   placeholder="Tell us about your interest in EHOA, hiking experience, and how you'd like to contribute to our mission..."
                   rows={4}
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none"
