@@ -12,28 +12,41 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 
 export default function Index() {
-  const [donationFormData, setDonationFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
   const [isDonationSubmitted, setIsDonationSubmitted] = useState(false);
-
-  const handleDonationInputChange = (field: string, value: string) => {
-    setDonationFormData((prev) => ({ ...prev, [field]: value }));
-  };
+  const [isSubmittingDonation, setIsSubmittingDonation] = useState(false);
 
   const handleDonationSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Log the donation interest for follow-up contact
-    console.log("Donation interest received:", donationFormData);
-    setIsDonationSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsDonationSubmitted(false);
-      setDonationFormData({ name: "", email: "", phone: "", message: "" });
-    }, 3000);
+    setIsSubmittingDonation(true);
+
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    formData.append('_subject', 'New Donation Interest - EHOA');
+
+    try {
+      const response = await fetch('https://formspree.io/f/mjkeoebw', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setIsDonationSubmitted(true);
+        (e.target as HTMLFormElement).reset();
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsDonationSubmitted(false);
+        }, 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting donation form:', error);
+      alert('There was an error submitting your donation interest. Please try again or contact us directly.');
+    } finally {
+      setIsSubmittingDonation(false);
+    }
   };
   const stats = [
     { icon: Users, label: "Hiking Organizer Groups", value: "15+" },
