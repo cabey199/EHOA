@@ -10,35 +10,41 @@ interface ContactFormData {
 }
 
 export default function Contact() {
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Contact form submitted:", formData);
-      setIsSubmitted(true);
-      setIsSubmitting(false);
-      
-      // Reset form after showing success message
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      }, 3000);
-    }, 1000);
-  };
 
-  const handleInputChange = (field: keyof ContactFormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    formData.append('_subject', 'New Contact Message - EHOA');
+
+    try {
+      const response = await fetch('https://formspree.io/f/mjkeoebw', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        (e.target as HTMLFormElement).reset();
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      alert('There was an error submitting your message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactMethods = [
@@ -181,9 +187,8 @@ export default function Contact() {
                         </label>
                         <input
                           id="name"
+                          name="name"
                           type="text"
-                          value={formData.name}
-                          onChange={(e) => handleInputChange("name", e.target.value)}
                           required
                           placeholder="Your full name"
                           className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
@@ -195,9 +200,8 @@ export default function Contact() {
                         </label>
                         <input
                           id="email"
+                          name="email"
                           type="email"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange("email", e.target.value)}
                           required
                           placeholder="your.email@example.com"
                           className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
@@ -211,9 +215,8 @@ export default function Contact() {
                       </label>
                       <input
                         id="phone"
+                        name="phone"
                         type="tel"
-                        value={formData.phone}
-                        onChange={(e) => handleInputChange("phone", e.target.value)}
                         placeholder="+251 912 345 678 (optional)"
                         className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                       />
@@ -225,8 +228,7 @@ export default function Contact() {
                       </label>
                       <textarea
                         id="message"
-                        value={formData.message}
-                        onChange={(e) => handleInputChange("message", e.target.value)}
+                        name="message"
                         required
                         placeholder="Tell us how we can help you..."
                         rows={5}
