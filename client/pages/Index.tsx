@@ -1,8 +1,32 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Calendar, MapPin, Heart, Shield, Award } from "lucide-react";
+import { useState } from "react";
 import Layout from "@/components/Layout";
 
 export default function Index() {
+  const [donationFormData, setDonationFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [isDonationSubmitted, setIsDonationSubmitted] = useState(false);
+
+  const handleDonationInputChange = (field: string, value: string) => {
+    setDonationFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleDonationSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Log the donation interest for follow-up contact
+    console.log("Donation interest received:", donationFormData);
+    setIsDonationSubmitted(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsDonationSubmitted(false);
+      setDonationFormData({ name: '', email: '', phone: '', message: '' });
+    }, 3000);
+  };
   const stats = [
     { icon: Users, label: "Hiking Organizer Groups", value: "15+" },
     { icon: Calendar, label: "Founded", value: "Jan 18, 2022" },
