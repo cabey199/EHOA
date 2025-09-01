@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Mountain, Menu, X } from "lucide-react";
+import { Mountain, Menu, X, Facebook, Instagram, Send } from "lucide-react";
 import { useState } from "react";
 
 interface LayoutProps {
@@ -113,8 +113,11 @@ export default function Layout({ children }: LayoutProps) {
                 </div>
                 <span className="text-lg font-bold text-foreground">EHOA</span>
               </div>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-sm mb-4">
                 Ethiopian Hiking Organizers Association - The first and only national association dedicated to hiking and camping in Ethiopia, established January 18, 2022 G.C.
+              </p>
+              <p className="text-primary text-sm font-medium italic">
+                "Elevate Ethiopian Hiking Culture Together"
               </p>
             </div>
             
@@ -137,10 +140,40 @@ export default function Layout({ children }: LayoutProps) {
 
             <div>
               <h3 className="text-sm font-semibold text-foreground mb-4">Contact Info</h3>
-              <div className="text-sm text-muted-foreground space-y-1">
-                <p>Email: info@ehoa.org</p>
-                <p>Telegram: @EHOAOfficial</p>
-                <p>Addis Ababa, Ethiopia</p>
+              <div className="text-sm text-muted-foreground space-y-2">
+                <p>Email: ethhikingorganizersassociation@gmail.com</p>
+                <p>Phone: +251986273038</p>
+                <p>Address: Gerji mariam, AW HAKIM building 4th floor</p>
+                <p>Telegram: @Ethiopian_Hiking_Association</p>
+              </div>
+              <div className="mt-4">
+                <h4 className="text-sm font-semibold text-foreground mb-3">Follow Us</h4>
+                <div className="flex space-x-3">
+                  <a
+                    href="https://t.me/Ethiopian_Hiking_Association"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Send className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/108734781630147/posts/148515690985389/?sfnsn=mo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://instagram.com/ehoa_ethiopia?igshid=ZGUzMzM3NWJiOQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
