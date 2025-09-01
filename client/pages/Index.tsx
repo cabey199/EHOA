@@ -133,12 +133,11 @@ export default function Index() {
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           {/* EHOA Logo Slot */}
           <div className="mb-8 flex justify-center">
-            <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-white/10 backdrop-blur-sm rounded-full border-4 border-white/20 border-dashed flex items-center justify-center shadow-2xl">
-              <div className="text-center">
-                <span className="text-white/60 text-lg md:text-xl font-semibold block mb-1">EHOA</span>
-                <span className="text-white/40 text-sm">Logo Slot</span>
-              </div>
-            </div>
+            <img
+              src="https://via.placeholder.com/192x192/ffffff10/ffffff60?text=EHOA+LOGO"
+              alt="EHOA Logo"
+              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full border-4 border-white/20 shadow-2xl object-cover"
+            />
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
