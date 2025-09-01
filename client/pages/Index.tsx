@@ -131,10 +131,13 @@ export default function Index() {
         </div>
 
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
             Uniting Hiking Groups
             <span className="block text-accent">Across Ethiopia</span>
           </h1>
+          <p className="text-xl md:text-2xl mb-6 text-accent/90 font-semibold italic">
+            "Elevate Ethiopian Hiking Culture Together"
+          </p>
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Join Ethiopia's first and only national association dedicated to
             hiking and camping. Connect with 15+ hiking organizer groups and
