@@ -20,15 +20,15 @@ export default function Index() {
     setIsSubmittingDonation(true);
 
     const formData = new FormData(e.currentTarget as HTMLFormElement);
-    formData.append('_subject', 'New Donation Interest - EHOA');
+    formData.append("_subject", "New Donation Interest - EHOA");
 
     try {
-      const response = await fetch('https://formspree.io/f/mjkeoebw', {
-        method: 'POST',
+      const response = await fetch("https://formspree.io/f/mjkeoebw", {
+        method: "POST",
         body: formData,
         headers: {
-          'Accept': 'application/json'
-        }
+          Accept: "application/json",
+        },
       });
 
       if (response.ok) {
@@ -39,11 +39,13 @@ export default function Index() {
           setIsDonationSubmitted(false);
         }, 5000);
       } else {
-        throw new Error('Form submission failed');
+        throw new Error("Form submission failed");
       }
     } catch (error) {
-      console.error('Error submitting donation form:', error);
-      alert('There was an error submitting your donation interest. Please try again or contact us directly.');
+      console.error("Error submitting donation form:", error);
+      alert(
+        "There was an error submitting your donation interest. Please try again or contact us directly.",
+      );
     } finally {
       setIsSubmittingDonation(false);
     }
@@ -132,8 +134,7 @@ export default function Index() {
 
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           {/* EHOA Logo Slot */}
-          <div className="mb-8 flex justify-center">
-          </div>
+          <div className="mb-8 flex justify-center"></div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
             Uniting Hiking Groups
@@ -390,7 +391,9 @@ export default function Index() {
                 disabled={isSubmittingDonation}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-4 rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50"
               >
-                {isSubmittingDonation ? 'Submitting...' : 'Express Donation Interest'}
+                {isSubmittingDonation
+                  ? "Submitting..."
+                  : "Express Donation Interest"}
               </button>
             </form>
           )}
