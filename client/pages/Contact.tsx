@@ -45,29 +45,29 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      details: "info@ehoa.org",
+      details: "ethhikingorganizersassociation@gmail.com",
       description: "Send us an email and we'll respond within 24 hours",
-      action: "mailto:info@ehoa.org"
+      action: "mailto:ethhikingorganizersassociation@gmail.com"
     },
     {
       icon: MessageCircle,
       title: "Telegram",
-      details: "@EHOAOfficial",
+      details: "@Ethiopian_Hiking_Association",
       description: "Join our Telegram channel for instant updates and support",
-      action: "https://t.me/EHOAOfficial"
+      action: "https://t.me/Ethiopian_Hiking_Association"
     },
     {
       icon: Phone,
-      title: "Emergency Line",
-      details: "+251 911 123 456",
-      description: "24/7 emergency support for hiking incidents",
-      action: "tel:+251911123456"
+      title: "Phone",
+      details: "+251986273038",
+      description: "Call us during business hours for inquiries and support",
+      action: "tel:+251986273038"
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "Addis Ababa, Ethiopia",
-      description: "We serve hiking groups across all regions of Ethiopia",
+      details: "Gerji mariam, AW HAKIM building 4th floor",
+      description: "Visit our office in Addis Ababa, Ethiopia",
       action: null
     }
   ];
