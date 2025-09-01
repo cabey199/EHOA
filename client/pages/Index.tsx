@@ -324,11 +324,8 @@ export default function Index() {
                   </label>
                   <input
                     id="donorName"
+                    name="name"
                     type="text"
-                    value={donationFormData.name}
-                    onChange={(e) =>
-                      handleDonationInputChange("name", e.target.value)
-                    }
                     required
                     placeholder="Your full name"
                     className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
@@ -343,11 +340,8 @@ export default function Index() {
                   </label>
                   <input
                     id="donorEmail"
+                    name="email"
                     type="email"
-                    value={donationFormData.email}
-                    onChange={(e) =>
-                      handleDonationInputChange("email", e.target.value)
-                    }
                     required
                     placeholder="your.email@example.com"
                     className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
@@ -363,11 +357,8 @@ export default function Index() {
                 </label>
                 <input
                   id="donorPhone"
+                  name="phone"
                   type="tel"
-                  value={donationFormData.phone}
-                  onChange={(e) =>
-                    handleDonationInputChange("phone", e.target.value)
-                  }
                   placeholder="+251 912 345 678 (optional)"
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
                 />
@@ -381,10 +372,7 @@ export default function Index() {
                 </label>
                 <textarea
                   id="donationMessage"
-                  value={donationFormData.message}
-                  onChange={(e) =>
-                    handleDonationInputChange("message", e.target.value)
-                  }
+                  name="message"
                   placeholder="Tell us about your donation interest or how you'd like to support EHOA..."
                   rows={4}
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none"
@@ -392,9 +380,10 @@ export default function Index() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-4 rounded-lg font-semibold transition-colors duration-200"
+                disabled={isSubmittingDonation}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-4 rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50"
               >
-                Express Donation Interest
+                {isSubmittingDonation ? 'Submitting...' : 'Express Donation Interest'}
               </button>
             </form>
           )}
