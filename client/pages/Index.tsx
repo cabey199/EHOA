@@ -127,17 +127,30 @@ export default function Index() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/40">
+            <img
+              loading="lazy"
+              srcSet="https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4"
+              src="https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4"
+              alt="EHOA Logo"
+              className="absolute object-cover object-center"
+              style={{
+                aspectRatio: "1.09",
+                width: "240px",
+                height: "237px",
+                top: "97px",
+                left: "494px",
+                minHeight: "20px",
+                minWidth: "20px",
+                overflow: "hidden"
+              }}
+            />
+          </div>
         </div>
 
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           {/* EHOA Logo Slot */}
           <div className="mb-8 flex justify-center">
-            <img
-              src="https://via.placeholder.com/192x192/ffffff10/ffffff60?text=EHOA+LOGO"
-              alt="EHOA Logo"
-              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full border-4 border-white/20 shadow-2xl object-cover"
-            />
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
