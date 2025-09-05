@@ -87,11 +87,36 @@ export default function About() {
   ];
 
   const leadership = [
-    { position: "President", name: "Misiker Kebede" },
-    { position: "Vice President", name: "Temesgen Adugna" },
-    { position: "PR Manager", name: "Mikiyas Tetemke" },
-    { position: "Finance Manager", name: "Thomas Girma" },
-    { position: "Secretary General", name: "To be announced" }
+    {
+      position: "President",
+      name: "Misiker Kebede",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fab41264dad654ab49b02f94470ea46be",
+    },
+    {
+      position: "Vice President",
+      name: "Temesgen Adugna",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F112e85a39d9c4d7cb35dd64de2816291",
+    },
+    {
+      position: "PR Manager",
+      name: "Mikiyas Tetemke",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=400",
+    },
+    {
+      position: "Finance Manager",
+      name: "Thomas Girma",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F3deaf258c7f34c949e0321bce073e1b1",
+    },
+    {
+      position: "Secretary General",
+      name: "To be announced",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=400",
+    },
   ];
 
   const achievements = [
@@ -161,7 +186,13 @@ export default function About() {
                 alt="Ethiopian hiking community"
                 className="rounded-xl shadow-xl w-full h-[600px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+              <div
+                className="absolute inset-0 rounded-xl bg-no-repeat bg-center bg-cover"
+                style={{
+                  backgroundImage:
+                    "url('https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6d7d5159335f460a988d1c4bae9510d1')",
+                }}
+              ></div>
             </div>
           </div>
         </div>
@@ -271,13 +302,13 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {leadership.map((leader, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
-                <div className="mx-auto mb-4">
+                <div className="mx-auto mb-4 flex flex-col">
                   <img
                     loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a"
+                    src={leader.image}
                     alt="Leadership member"
-                    className="w-full mt-5 min-h-5 min-w-5 object-cover object-center overflow-hidden"
-                    style={{ aspectRatio: 1.42 }}
+                    className="w-full object-cover object-center overflow-hidden"
+                    style={{ aspectRatio: 1.42, margin: "20px auto 0" }}
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{leader.name}</h3>
