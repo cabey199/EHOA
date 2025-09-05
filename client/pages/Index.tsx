@@ -120,16 +120,14 @@ export default function Index() {
     <Layout>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 bg-no-repeat bg-center bg-cover"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F8bd1bf2a85bc4854b032d27cff3c105c')",
+            }}
+          ></div>
         </div>
 
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
