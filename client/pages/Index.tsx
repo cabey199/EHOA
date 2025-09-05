@@ -80,13 +80,13 @@ export default function Index() {
   const galleryImages = [
     {
       id: 1,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F38aaed5d8aca4d9cbbb35253a11e351b?alt=media&token=55c729e4-78b6-4d42-bbe2-829c7be93be6&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa962fb0503ad463aa08d4b95b1da1f4a?format=webp&width=800",
       alt: "Mountain hiking in Ethiopia",
       title: "Simien Mountains Trek",
     },
     {
       id: 2,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa875d96597f9402b900a71603ac294aa?alt=media&token=004992a8-617a-4ee9-b919-c8aaf86a6504&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F5cd7ee0da63e4f29a593d35c877ce1e1?format=webp&width=800",
       alt: "Group camping under stars",
       title: "Camping Adventure",
     },
@@ -98,13 +98,13 @@ export default function Index() {
     },
     {
       id: 4,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F84ea68b01d7f4dd5956107c99f8631ac?alt=media&token=f29600b4-62a5-4e08-8eb7-9b5c42c64c6d&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F1cbbc9181b454c1fb1e412f3bfda0a93?format=webp&width=800",
       alt: "Hiking trail through mountains",
       title: "Highland Trails",
     },
     {
       id: 5,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fcb441b69d61447bb803dfddf063345c3?alt=media&token=4c0d1c79-5859-43a9-aafb-fbafd9c2b3e6&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F8c11aca151bb418eabd371cc4990e5be?format=webp&width=800",
       alt: "Sunrise over Ethiopian mountains",
       title: "Dawn Expeditions",
     },
