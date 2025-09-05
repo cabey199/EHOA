@@ -80,37 +80,37 @@ export default function Index() {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&h=400&fit=crop",
+      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F38aaed5d8aca4d9cbbb35253a11e351b?alt=media&token=55c729e4-78b6-4d42-bbe2-829c7be93be6&apiKey=06dfe1409ccc42b5babece67b54a91f6",
       alt: "Mountain hiking in Ethiopia",
       title: "Simien Mountains Trek",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop",
+      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa875d96597f9402b900a71603ac294aa?alt=media&token=004992a8-617a-4ee9-b919-c8aaf86a6504&apiKey=06dfe1409ccc42b5babece67b54a91f6",
       alt: "Group camping under stars",
       title: "Camping Adventure",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F2f51e5a59d11424b8ed449f3571f98d0?format=webp&width=800",
       alt: "Mountain landscape in Ethiopia",
       title: "Bale Mountains",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1486022069284-348e03132178?w=600&h=400&fit=crop",
+      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F84ea68b01d7f4dd5956107c99f8631ac?alt=media&token=f29600b4-62a5-4e08-8eb7-9b5c42c64c6d&apiKey=06dfe1409ccc42b5babece67b54a91f6",
       alt: "Hiking trail through mountains",
       title: "Highland Trails",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5a?w=600&h=400&fit=crop",
+      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fcb441b69d61447bb803dfddf063345c3?alt=media&token=4c0d1c79-5859-43a9-aafb-fbafd9c2b3e6&apiKey=06dfe1409ccc42b5babece67b54a91f6",
       alt: "Sunrise over Ethiopian mountains",
       title: "Dawn Expeditions",
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&h=400&fit=crop",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0fcedd993d9142d6b4e7cb072de2c483?format=webp&width=800",
       alt: "Hikers on mountain peak",
       title: "Summit Success",
     },
