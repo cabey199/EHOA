@@ -214,7 +214,7 @@ export default function Index() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop"
+                src="https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa31efa46a5d242aaa63af5b5b929f5f1"
                 alt="Ethiopian mountain landscape"
                 className="rounded-lg shadow-xl w-full h-[500px] object-cover"
               />
