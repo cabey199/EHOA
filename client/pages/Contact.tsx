@@ -87,7 +87,7 @@ export default function Contact() {
     },
     {
       question: "Is there a membership fee?",
-      answer: "Basic membership is free and includes access to our community and events. We also offer premium memberships with additional benefits like gear discounts and priority event registration."
+      answer: "Membership Fee Structure\nRegistration Fee (One-time): 5,000 birr\n(This fee is payable in installments of 1,000 birr per month for the first 5 months).\nStandard Monthly Contribution (Afterwards): 500 birr per month"
     },
     {
       question: "What safety measures do you have?",
@@ -255,7 +255,7 @@ export default function Contact() {
                   {faqs.map((faq, index) => (
                     <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
                       <h4 className="font-semibold text-foreground mb-3">{faq.question}</h4>
-                      <p className="text-muted-foreground">{faq.answer}</p>
+                      <p className="text-muted-foreground" style={{ whiteSpace: "pre-line" }}>{faq.answer}</p>
                     </div>
                   ))}
                 </div>
