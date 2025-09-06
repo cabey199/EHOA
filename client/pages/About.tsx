@@ -115,7 +115,7 @@ export default function About() {
       position: "PR Manager",
       name: "Mikiyas Tetemke",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=400",
+        "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0064152389dd408eb9d474bb65948e87",
     },
     {
       position: "Finance Manager",
@@ -125,9 +125,9 @@ export default function About() {
     },
     {
       position: "Secretary General",
-      name: "To be announced",
+      name: "Mera Enku",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F72c80f114dc149019051b6852a9e3b7a?width=400",
+        "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F83ff1002e7ad4419872054a557da295e",
     },
   ];
 
