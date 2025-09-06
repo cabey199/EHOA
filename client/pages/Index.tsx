@@ -97,7 +97,7 @@ export default function Index() {
   const galleryImages = [
     {
       id: 1,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa962fb0503ad463aa08d4b95b1da1f4a?format=webp&width=800",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fac8b2dc241d4481bae8247ef414fb461?format=webp&width=800",
       alt: "Mountain hiking in Ethiopia",
       title: "Simien Mountains Trek",
     },
