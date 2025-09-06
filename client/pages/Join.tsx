@@ -333,6 +333,108 @@ export default function Join() {
           </div>
         </div>
       </section>
+
+      {/* Member Benefits */}
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">Member Benefits of Joining EHOA</h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-12 text-center">
+            Joining the Ethiopian Hiking Organizers Association (EHOA) connects you with a national network of hiking and camping leaders, offers exclusive opportunities,
+            and strengthens your role in shaping the future of outdoor tourism in Ethiopia.
+          </p>
+
+          <div className="space-y-10">
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">1. Networking & Collaboration</h3>
+              <ul className="list-none space-y-2 text-muted-foreground">
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Be part of the first and only national hiking & camping association in Ethiopia.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Connect with experienced organizers, guides, and outdoor enthusiasts across the country.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Access opportunities for partnerships, co-organized trips, and cross-promotion.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">2. Training & Capacity Building</h3>
+              <ul className="list-none space-y-2 text-muted-foreground">
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Priority access to workshops and skill-development programs for guides, organizers, and volunteers.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Discounts on training certifications in safety, first aid, eco-tourism, and sustainable travel.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Mentorship from pioneering association members and industry experts.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">3. Visibility & Promotion</h3>
+              <ul className="list-none space-y-2 text-muted-foreground">
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Get listed on EHOA’s official platforms (website, social media, promotional campaigns).</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Opportunity to showcase your trips and activities during Ethiopian Hiking Day and other national events.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Media and PR exposure through the association’s press releases, exhibitions, and campaigns.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">4. Advocacy & Representation</h3>
+              <ul className="list-none space-y-2 text-muted-foreground">
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Have your voice represented at national tourism discussions and policymaking forums.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Benefit from EHOA’s partnerships with tourism boards, NGOs, and sponsors.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Collective advocacy for infrastructure development and recognition of hiking/camping as a vital tourism sector.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">5. Trail Development & Access</h3>
+              <ul className="list-none space-y-2 text-muted-foreground">
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Exclusive involvement in new trail development projects and hiking route discoveries.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Early access to updated information on established and upcoming hiking destinations.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Support for organizing eco-friendly and community-based tourism initiatives.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">6. Community Impact</h3>
+              <ul className="list-none space-y-2 text-muted-foreground">
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Engage in community-based tourism projects that benefit local communities.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Participate in charity and environmental stewardship programs (tree planting, clean-up hikes, etc.).</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Strengthen sustainable tourism practices that protect Ethiopia’s natural heritage.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">7. Discounts & Special Offers</h3>
+              <ul className="list-none space-y-2 text-muted-foreground">
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Reduced fees for association-organized events, exhibitions, and training programs.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Partner discounts on gear, logistics, and outdoor services (subject to collaborations).</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">8. Recognition & Growth</h3>
+              <ul className="list-none space-y-2 text-muted-foreground">
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Official membership certificate recognizing you as part of Ethiopia’s leading hiking association.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Eligibility to compete for annual awards recognizing excellence in hiking and camping organization.</li>
+                <li className="flex items-start"><CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5"/>Opportunities to lead or participate in national and international hiking events.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-white rounded-xl shadow-sm p-8">
+            <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">Membership Fee Structure</h3>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="p-4">
+                <div className="text-3xl font-bold text-primary mb-1">5,000 birr</div>
+                <p className="text-muted-foreground">Registration Fee (one-time)</p>
+              </div>
+              <div className="p-4">
+                <div className="text-3xl font-bold text-primary mb-1">1,000 birr</div>
+                <p className="text-muted-foreground">Monthly Contribution (first 5 months)</p>
+              </div>
+              <div className="p-4">
+                <div className="text-3xl font-bold text-primary mb-1">500 birr</div>
+                <p className="text-muted-foreground">Standard Monthly Contribution (afterwards)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
