@@ -143,7 +143,7 @@ export default function Layout({ children }: LayoutProps) {
 
             <div>
               <h3 className="font-semibold mb-2">Select an Amount</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {["500","1000","5000","10000"].map((amt) => (
                   <label key={amt} className="cursor-pointer border rounded-lg px-4 py-2 flex items-center justify-between">
                     <input type="radio" name="donationAmount" value={amt} className="mr-2" />
