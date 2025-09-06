@@ -183,19 +183,19 @@ export default function Layout({ children }: LayoutProps) {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm mb-1">First Name*</label>
-                  <input name="firstName" required className="w-full border border-border rounded px-3 py-2" />
+                  <input name="firstName" required className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Last Name*</label>
-                  <input name="lastName" required className="w-full border border-border rounded px-3 py-2" />
+                  <input name="lastName" required className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Email*</label>
-                  <input name="email" type="email" required className="w-full border border-border rounded px-3 py-2" />
+                  <input name="email" type="email" required className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Phone*</label>
-                  <input name="phone" required className="w-full border border-border rounded px-3 py-2" />
+                  <input name="phone" required className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
               </div>
               <label className="mt-2 flex items-center gap-2 text-sm"><input type="checkbox" name="emailReceipts" /> Yes, send all receipts and communications by email</label>
@@ -206,29 +206,29 @@ export default function Layout({ children }: LayoutProps) {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="sm:col-span-2">
                   <label className="block text-sm mb-1">Street Address</label>
-                  <input name="street" className="w-full border border-border rounded px-3 py-2" />
+                  <input name="street" className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">City</label>
-                  <input name="city" className="w-full border border-border rounded px-3 py-2" />
+                  <input name="city" className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Region/Province</label>
-                  <input name="region" className="w-full border border-border rounded px-3 py-2" />
+                  <input name="region" className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Country</label>
-                  <input name="country" className="w-full border border-border rounded px-3 py-2" />
+                  <input name="country" className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Postal Code</label>
-                  <input name="postalCode" className="w-full border border-border rounded px-3 py-2" />
+                  <input name="postalCode" className="w-full border border-border rounded px-3 py-2 text-sm" />
                 </div>
               </div>
             </div>
 
             <div className="flex justify-end">
-              <button type="submit" className="px-5 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90">Donate Now</button>
+              <button type="submit" className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 text-sm">Donate Now</button>
             </div>
           </form>
         </DialogContent>
@@ -315,7 +315,8 @@ export default function Layout({ children }: LayoutProps) {
           
           <div className="mt-8 pt-8 border-t border-border">
             <p className="text-center text-sm text-muted-foreground">
-              © 2024 Ethiopian Hiking Organizers Association. All rights reserved.
+              © 2025 Ethiopian Hiking Organizers Association. alright reserved. Made and powered by
+              <a href="https://calebassefa.netlify.app/" target="_blank" rel="noopener noreferrer" className="ml-1 underline-offset-2 hover:underline text-foreground">"cabey tech 🥾"</a>
             </p>
           </div>
         </div>
