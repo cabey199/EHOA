@@ -243,9 +243,6 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-6 h-6 bg-primary/10 rounded border border-dashed border-primary/30 flex items-center justify-center">
-                  <span className="text-[8px] text-primary/60 font-medium">Logo</span>
-                </div>
                 <span className="text-lg font-bold text-foreground">EHOA</span>
               </div>
               <p className="text-muted-foreground text-sm mb-4">
