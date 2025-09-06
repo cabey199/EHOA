@@ -8,12 +8,29 @@ import {
   Shield,
   Award,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 
 export default function Index() {
   const [isDonationSubmitted, setIsDonationSubmitted] = useState(false);
   const [isSubmittingDonation, setIsSubmittingDonation] = useState(false);
+  const heroImages = [
+    "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F8bd1bf2a85bc4854b032d27cff3c105c",
+    "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6994e9f794e14e8daeb9e6803dba3653?format=webp&width=1600",
+    "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F98d47c6b0b2548378458e797514400f7?format=webp&width=1600",
+    "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Ffd66b4022d054c38aa8e8cb5e220a5db?format=webp&width=1600",
+  ];
+  const [heroIndex, setHeroIndex] = useState(0);
+  useEffect(() => {
+    heroImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+    const interval = setInterval(() => {
+      setHeroIndex((i) => (i + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleDonationSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -121,13 +138,14 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-no-repeat bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F8bd1bf2a85bc4854b032d27cff3c105c')",
-            }}
-          ></div>
+          {heroImages.map((src, idx) => (
+            <div
+              key={idx}
+              className={`absolute inset-0 bg-center bg-cover transition-opacity duration-1000 ease-in-out ${idx === heroIndex ? "opacity-100" : "opacity-0"}`}
+              style={{ backgroundImage: `url('${src}')` }}
+            />
+          ))}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
