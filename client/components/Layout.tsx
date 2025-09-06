@@ -9,6 +9,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [donateOpen, setDonateOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
