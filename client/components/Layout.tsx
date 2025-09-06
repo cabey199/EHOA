@@ -125,11 +125,11 @@ export default function Layout({ children }: LayoutProps) {
       </nav>
 
       <Dialog open={donateOpen} onOpenChange={setDonateOpen}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-lg p-4 sm:p-5 max-h-[85vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Ethiopian Hiking Organizers Association (EHOA) Donation Form</DialogTitle>
+            <DialogTitle className="text-base sm:text-lg">Ethiopian Hiking Organizers Association (EHOA) Donation Form</DialogTitle>
           </DialogHeader>
-          <form action="https://formspree.io/f/mjkeoebw" method="POST" className="space-y-6">
+          <form action="https://formspree.io/f/mjkeoebw" method="POST" className="space-y-4 text-sm">
             <input type="hidden" name="_subject" value="New Donation - EHOA" />
             <p className="text-sm text-muted-foreground">
               Make a gift to the Ethiopian Hiking Organizers Association (EHOA) today and your support will help:
