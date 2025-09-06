@@ -315,8 +315,7 @@ export default function Layout({ children }: LayoutProps) {
           
           <div className="mt-8 pt-8 border-t border-border">
             <p className="text-center text-sm text-muted-foreground">
-              © 2025 Ethiopian Hiking Organizers Association. alright reserved. Made and powered by
-              <a href="https://calebassefa.netlify.app/" target="_blank" rel="noopener noreferrer" className="ml-1 underline-offset-2 hover:underline text-foreground">"cabey tech 🥾"</a>
+              © 2025 Ethiopian Hiking Organizers Association. alright reserved.
             </p>
           </div>
         </div>
