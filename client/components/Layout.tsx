@@ -1,7 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mountain, Menu, X, Facebook, Instagram, Send } from "lucide-react";
 import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -52,7 +57,9 @@ export default function Layout({ children }: LayoutProps) {
                   <Link
                     key={item.name}
                     to={item.href}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive(item.href)
                         ? "text-primary bg-primary/10 shadow-sm"
@@ -98,7 +105,7 @@ export default function Layout({ children }: LayoutProps) {
                   to={item.href}
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                   className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                     isActive(item.href)
@@ -127,54 +134,113 @@ export default function Layout({ children }: LayoutProps) {
       <Dialog open={donateOpen} onOpenChange={setDonateOpen}>
         <DialogContent className="max-w-lg p-4 sm:p-5 max-h-[85vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-base sm:text-lg">Ethiopian Hiking Organizers Association (EHOA) Donation Form</DialogTitle>
+            <DialogTitle className="text-base sm:text-lg">
+              Ethiopian Hiking Organizers Association (EHOA) Donation Form
+            </DialogTitle>
           </DialogHeader>
-          <form action="https://formspree.io/f/mjkeoebw" method="POST" className="space-y-4 text-sm">
+          <form
+            action="https://formspree.io/f/mjkeoebw"
+            method="POST"
+            className="space-y-4 text-sm"
+          >
             <input type="hidden" name="_subject" value="New Donation - EHOA" />
             <p className="text-sm text-muted-foreground">
-              Make a gift to the Ethiopian Hiking Organizers Association (EHOA) today and your support will help:
+              Make a gift to the Ethiopian Hiking Organizers Association (EHOA)
+              today and your support will help:
             </p>
             <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
-              <li>Build, maintain, and promote hiking trails across Ethiopia.</li>
-              <li>Inspire and engage the next generation of hikers, volunteers, and environmental advocates.</li>
-              <li>Provide training and leadership development for hiking and camping organizers.</li>
-              <li>Raise awareness and educate communities on the benefits of hiking, camping, and environmental stewardship.</li>
+              <li>
+                Build, maintain, and promote hiking trails across Ethiopia.
+              </li>
+              <li>
+                Inspire and engage the next generation of hikers, volunteers,
+                and environmental advocates.
+              </li>
+              <li>
+                Provide training and leadership development for hiking and
+                camping organizers.
+              </li>
+              <li>
+                Raise awareness and educate communities on the benefits of
+                hiking, camping, and environmental stewardship.
+              </li>
             </ul>
 
             <div>
               <h3 className="font-semibold mb-2">Select an Amount</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {["500","1000","5000","10000"].map((amt) => (
-                  <label key={amt} className="cursor-pointer border rounded-lg px-4 py-2 flex items-center justify-between">
-                    <input type="radio" name="donationAmount" value={amt} className="mr-2" />
+                {["500", "1000", "5000", "10000"].map((amt) => (
+                  <label
+                    key={amt}
+                    className="cursor-pointer border rounded-lg px-4 py-2 flex items-center justify-between"
+                  >
+                    <input
+                      type="radio"
+                      name="donationAmount"
+                      value={amt}
+                      className="mr-2"
+                    />
                     <span>{parseInt(amt).toLocaleString()} Birr</span>
                   </label>
                 ))}
                 <div className="col-span-2 sm:col-span-3 flex items-center gap-2 border rounded-lg px-3 py-2">
-                  <input type="radio" name="donationAmount" value="other" className="mr-1" />
+                  <input
+                    type="radio"
+                    name="donationAmount"
+                    value="other"
+                    className="mr-1"
+                  />
                   <label className="text-sm">Other Amount:</label>
-                  <input name="otherAmount" type="number" min="1" className="flex-1 border border-border rounded px-2 py-1" placeholder="Birr" />
+                  <input
+                    name="otherAmount"
+                    type="number"
+                    min="1"
+                    className="flex-1 border border-border rounded px-2 py-1"
+                    placeholder="Birr"
+                  />
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-2">I want to contribute this amount</h3>
+              <h3 className="font-semibold mb-2">
+                I want to contribute this amount
+              </h3>
               <div className="flex flex-col sm:flex-row gap-3">
-                <label className="flex items-center gap-2"><input type="radio" name="contributionType" value="one_go" /> in one go</label>
-                <label className="flex items-center gap-2"><input type="radio" name="contributionType" value="installments" /> in installments</label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="contributionType" value="one_go" />{" "}
+                  in one go
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="contributionType"
+                    value="installments"
+                  />{" "}
+                  in installments
+                </label>
               </div>
             </div>
 
             <div>
               <h3 className="font-semibold mb-2">My Gift is a Tribute</h3>
               <div className="flex flex-col sm:flex-row gap-3">
-                <label className="flex items-center gap-2"><input type="radio" name="tribute" value="honor" /> In Honor Of</label>
-                <label className="flex items-center gap-2"><input type="radio" name="tribute" value="memory" /> In Memory Of</label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="tribute" value="honor" /> In Honor
+                  Of
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="tribute" value="memory" /> In Memory
+                  Of
+                </label>
               </div>
               <div className="mt-3">
                 <label className="block text-sm mb-1">Honoree Name</label>
-                <input name="honoreeName" type="text" className="w-full border border-border rounded px-3 py-2" />
+                <input
+                  name="honoreeName"
+                  type="text"
+                  className="w-full border border-border rounded px-3 py-2"
+                />
               </div>
             </div>
 
@@ -183,22 +249,42 @@ export default function Layout({ children }: LayoutProps) {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm mb-1">First Name*</label>
-                  <input name="firstName" required className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="firstName"
+                    required
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Last Name*</label>
-                  <input name="lastName" required className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="lastName"
+                    required
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Email*</label>
-                  <input name="email" type="email" required className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Phone*</label>
-                  <input name="phone" required className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="phone"
+                    required
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
               </div>
-              <label className="mt-2 flex items-center gap-2 text-sm"><input type="checkbox" name="emailReceipts" /> Yes, send all receipts and communications by email</label>
+              <label className="mt-2 flex items-center gap-2 text-sm">
+                <input type="checkbox" name="emailReceipts" /> Yes, send all
+                receipts and communications by email
+              </label>
             </div>
 
             <div>
@@ -206,29 +292,49 @@ export default function Layout({ children }: LayoutProps) {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="sm:col-span-2">
                   <label className="block text-sm mb-1">Street Address</label>
-                  <input name="street" className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="street"
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">City</label>
-                  <input name="city" className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="city"
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Region/Province</label>
-                  <input name="region" className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="region"
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Country</label>
-                  <input name="country" className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="country"
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm mb-1">Postal Code</label>
-                  <input name="postalCode" className="w-full border border-border rounded px-3 py-2 text-sm" />
+                  <input
+                    name="postalCode"
+                    className="w-full border border-border rounded px-3 py-2 text-sm"
+                  />
                 </div>
               </div>
             </div>
 
             <div className="flex justify-end">
-              <button type="submit" className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 text-sm">Donate Now</button>
+              <button
+                type="submit"
+                className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 text-sm"
+              >
+                Donate Now
+              </button>
             </div>
           </form>
         </DialogContent>
@@ -246,21 +352,27 @@ export default function Layout({ children }: LayoutProps) {
                 <span className="text-lg font-bold text-foreground">EHOA</span>
               </div>
               <p className="text-muted-foreground text-sm mb-4">
-                Ethiopian Hiking Organizers Association - The first and only national association dedicated to hiking and camping in Ethiopia, established January 18, 2022 G.C.
+                Ethiopian Hiking Organizers Association - The first and only
+                national association dedicated to hiking and camping in
+                Ethiopia, established January 18, 2022 G.C.
               </p>
               <p className="text-primary text-sm font-medium italic">
                 "Elevate Ethiopian Hiking Culture Together"
               </p>
             </div>
-            
+
             <div>
-              <h3 className="text-sm font-semibold text-foreground mb-4">Quick Links</h3>
+              <h3 className="text-sm font-semibold text-foreground mb-4">
+                Quick Links
+              </h3>
               <ul className="space-y-2">
                 {navigation.map((item) => (
                   <li key={item.name}>
                     <Link
                       to={item.href}
-                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {item.name}
@@ -271,7 +383,9 @@ export default function Layout({ children }: LayoutProps) {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-foreground mb-4">Contact Info</h3>
+              <h3 className="text-sm font-semibold text-foreground mb-4">
+                Contact Info
+              </h3>
               <div className="text-sm text-muted-foreground space-y-2">
                 <p>Email: ethhikingorganizersassociation@gmail.com</p>
                 <p>Phone: +251986273038</p>
@@ -279,7 +393,9 @@ export default function Layout({ children }: LayoutProps) {
                 <p>Telegram: @Ethiopian_Hiking_Association</p>
               </div>
               <div className="mt-4">
-                <h4 className="text-sm font-semibold text-foreground mb-3">Follow Us</h4>
+                <h4 className="text-sm font-semibold text-foreground mb-3">
+                  Follow Us
+                </h4>
                 <div className="flex space-x-3">
                   <a
                     href="https://t.me/Ethiopian_Hiking_Association"
@@ -309,7 +425,7 @@ export default function Layout({ children }: LayoutProps) {
               </div>
             </div>
           </div>
-          
+
           <div className="mt-8 pt-8 border-t border-border">
             <p className="text-center text-sm text-muted-foreground">
               © 2025 Ethiopian Hiking Organizers Association. alright reserved.
@@ -320,7 +436,14 @@ export default function Layout({ children }: LayoutProps) {
       <div className="py-4">
         <p className="text-center text-sm">
           <span className="text-blue-600">made and powered by </span>
-          <a href="https://calebassefa.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">cabey tech 🌐</a>
+          <a
+            href="https://calebassefa.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-700"
+          >
+            cabey tech 🌐
+          </a>
         </p>
       </div>
     </div>
