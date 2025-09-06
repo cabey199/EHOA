@@ -320,6 +320,12 @@ export default function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </footer>
+      <div className="py-4">
+        <p className="text-center text-sm">
+          <span className="text-blue-600">made and powered by </span>
+          <a href="https://calebassefa.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">cabey tech 🌐</a>
+        </p>
+      </div>
     </div>
   );
 }
