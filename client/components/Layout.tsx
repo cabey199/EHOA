@@ -109,6 +109,16 @@ export default function Layout({ children }: LayoutProps) {
                   {item.name}
                 </Link>
               ))}
+              <button
+                type="button"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setDonateOpen(true);
+                }}
+                className="block w-full text-left px-3 py-2 rounded-lg text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                Donate
+              </button>
             </div>
           </div>
         )}
