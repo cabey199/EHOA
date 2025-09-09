@@ -26,9 +26,7 @@ export default function Contact() {
         {
           method: "POST",
           body: formData,
-          headers: {
-            Accept: "application/json",
-          },
+          mode: "cors",
         },
       );
 
