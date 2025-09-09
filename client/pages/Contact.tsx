@@ -21,7 +21,7 @@ export default function Contact() {
     formData.append("_subject", "New Contact Message - EHOA");
 
     try {
-      const response = await fetch("/api/form-handler.php", {
+      const response = await fetch("https://ethiopianhiking.org/api/form-handler.php", {
         method: "POST",
         body: formData,
         headers: {
@@ -211,7 +211,7 @@ export default function Contact() {
                 ) : (
                   <form
                     onSubmit={handleSubmit}
-                    action="/api/form-handler.php"
+                    action="https://ethiopianhiking.org/api/form-handler.php"
                     method="POST"
                     encType="multipart/form-data"
                     className="space-y-6"
