@@ -21,13 +21,16 @@ export default function Contact() {
     formData.append("_subject", "New Contact Message - EHOA");
 
     try {
-      const response = await fetch("https://ethiopianhiking.org/api/form-handler.php", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
+      const response = await fetch(
+        "https://ethiopianhiking.org/api/form-handler.php",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
         },
-      });
+      );
 
       if (response.ok) {
         setIsSubmitted(true);

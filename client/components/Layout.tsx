@@ -36,11 +36,14 @@ export default function Layout({ children }: LayoutProps) {
     const formData = new FormData(form);
     formData.append("formType", "donation");
     try {
-      const response = await fetch("https://ethiopianhiking.org/api/form-handler.php", {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
+      const response = await fetch(
+        "https://ethiopianhiking.org/api/form-handler.php",
+        {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        },
+      );
       if (response.ok) {
         window.location.href = "/thank-you";
       } else {
