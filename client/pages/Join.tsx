@@ -298,6 +298,7 @@ export default function Join() {
               className="space-y-6"
             >
               <input type="hidden" name="formType" value="join" />
+              <input type="hidden" name="generate_id" value="1" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label
