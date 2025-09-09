@@ -5,7 +5,9 @@ export default function ThankYou() {
     <Layout>
       <section className="py-24 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Thank You!</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Thank You!
+          </h1>
           <p className="text-lg text-muted-foreground mb-10">
             Your submission was received successfully. Well be in touch soon.
           </p>
