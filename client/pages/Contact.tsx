@@ -31,11 +31,7 @@ export default function Contact() {
 
       if (response.ok) {
         setIsSubmitted(true);
-        (e.target as HTMLFormElement).reset();
-        // Reset success message after 5 seconds
-        setTimeout(() => {
-          setIsSubmitted(false);
-        }, 5000);
+        window.location.href = "/thank-you";
       } else {
         throw new Error("Form submission failed");
       }
