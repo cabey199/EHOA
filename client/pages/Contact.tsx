@@ -21,7 +21,7 @@ export default function Contact() {
     formData.append("_subject", "New Contact Message - EHOA");
 
     try {
-      const response = await fetch("https://formspree.io/f/mjkeoebw", {
+      const response = await fetch("/api/form-handler.php", {
         method: "POST",
         body: formData,
         headers: {
