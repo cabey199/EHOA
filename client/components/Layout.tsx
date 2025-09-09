@@ -41,7 +41,7 @@ export default function Layout({ children }: LayoutProps) {
         {
           method: "POST",
           body: formData,
-          headers: { Accept: "application/json" },
+          mode: "cors",
         },
       );
       if (response.ok) {
