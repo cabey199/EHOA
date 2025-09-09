@@ -209,7 +209,8 @@ export default function Contact() {
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} action="/api/form-handler.php" method="POST" encType="multipart/form-data" className="space-y-6">
+                    <input type="hidden" name="formType" value="contact" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label
