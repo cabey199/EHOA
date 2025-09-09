@@ -67,9 +67,7 @@ export default function Join() {
         {
           method: "POST",
           body: formData,
-          headers: {
-            Accept: "application/json",
-          },
+          mode: "cors",
         },
       );
 
