@@ -62,7 +62,7 @@ export default function Join() {
     }));
 
     try {
-      const response = await fetch("https://formspree.io/f/mjkeoebw", {
+      const response = await fetch("/api/form-handler.php", {
         method: "POST",
         body: formData,
         headers: {
@@ -74,6 +74,7 @@ export default function Join() {
         const newMemberId = generateMemberId();
         setMemberId(newMemberId);
         setIsSubmitted(true);
+        window.location.href = "/thank-you";
       } else {
         throw new Error("Form submission failed");
       }
@@ -286,7 +287,8 @@ export default function Join() {
               soon.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} action="/api/form-handler.php" method="POST" encType="multipart/form-data" className="space-y-6">
+              <input type="hidden" name="formType" value="join" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label

@@ -30,6 +30,27 @@ export default function Layout({ children }: LayoutProps) {
     return false;
   };
 
+  const handleDonationSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("formType", "donation");
+    try {
+      const response = await fetch("/api/form-handler.php", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) {
+        window.location.href = "/thank-you";
+      } else {
+        alert("There was an error submitting your donation. Please try again.");
+      }
+    } catch (err) {
+      alert("There was an error submitting your donation. Please try again.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -139,11 +160,14 @@ export default function Layout({ children }: LayoutProps) {
             </DialogTitle>
           </DialogHeader>
           <form
-            action="https://formspree.io/f/mjkeoebw"
+            action="/api/form-handler.php"
             method="POST"
+            encType="multipart/form-data"
+            onSubmit={handleDonationSubmit}
             className="space-y-4 text-sm"
           >
             <input type="hidden" name="_subject" value="New Donation - EHOA" />
+            <input type="hidden" name="formType" value="donation" />
             <p className="text-sm text-muted-foreground">
               Make a gift to the Ethiopian Hiking Organizers Association (EHOA)
               today and your support will help:
