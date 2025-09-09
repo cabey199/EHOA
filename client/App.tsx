@@ -21,4 +21,14 @@ const App = () => (
   </BrowserRouter>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+declare global {
+  interface Window {
+    __REACT_ROOT__?: Root;
+  }
+}
+
+const container = document.getElementById("root")!;
+if (!window.__REACT_ROOT__) {
+  window.__REACT_ROOT__ = createRoot(container);
+}
+window.__REACT_ROOT__.render(<App />);
