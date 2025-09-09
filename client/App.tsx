@@ -1,5 +1,5 @@
 import "./global.css";
-import { createRoot } from "react-dom/client";
+import { createRoot, Root } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
