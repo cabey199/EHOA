@@ -37,7 +37,7 @@ export default function Layout({ children }: LayoutProps) {
     formData.append("formType", "donation");
     try {
       const response = await fetch(
-        "https://ethiopianhiking2.org/api/form-handler.php",
+        "https://sethiopianhiking2.org/api/form-handler.php",
         {
           method: "POST",
           body: formData,
@@ -163,7 +163,7 @@ export default function Layout({ children }: LayoutProps) {
             </DialogTitle>
           </DialogHeader>
           <form
-            action="https://ethiopianhiking2.org/api/form-handler.php"
+            action="https://sethiopianhiking2.org/api/form-handler.php"
             method="POST"
             encType="multipart/form-data"
             onSubmit={handleDonationSubmit}

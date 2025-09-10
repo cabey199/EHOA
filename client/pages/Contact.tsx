@@ -22,7 +22,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        "https://ethiopianhiking2.org/api/form-handler.php",
+        "https://sethiopianhiking2.org/api/form-handler.php",
         {
           method: "POST",
           body: formData,
@@ -212,7 +212,7 @@ export default function Contact() {
                 ) : (
                   <form
                     onSubmit={handleSubmit}
-                    action="https://ethiopianhiking2.org/api/form-handler.php"
+                    action="https://sethiopianhiking2.org/api/form-handler.php"
                     method="POST"
                     encType="multipart/form-data"
                     className="space-y-6"
