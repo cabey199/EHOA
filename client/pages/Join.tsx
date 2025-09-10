@@ -63,7 +63,7 @@ export default function Join() {
 
     try {
       const response = await fetch(
-        "https://ethiopianhiking.org/api/form-handler.php",
+        "https://forms.ethiopianhiking.org/api/form-handler.php",
         {
           method: "POST",
           body: formData,
@@ -290,12 +290,12 @@ export default function Join() {
 
             <form
               onSubmit={handleSubmit}
-              action="https://ethiopianhiking.org/api/form-handler.php"
+              action="https://forms.ethiopianhiking.org/api/form-handler.php"
               method="POST"
               encType="multipart/form-data"
               className="space-y-6"
             >
-              <input type="hidden" name="formType" value="join" />
+              <input type="hidden" name="formType" value="membership" />
               <input type="hidden" name="generate_id" value="1" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -370,23 +370,27 @@ export default function Join() {
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Profile Photo (Optional)
+                  Profile Photo
                 </label>
                 <div className="max-w-xs mx-auto">
                   <div className="h-40 border-2 border-dashed border-border rounded-lg flex items-center justify-center bg-gray-50">
                     <div className="text-center">
                       <User className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
                       <p className="text-sm text-muted-foreground">
-                        Profile Photo Area
-                      </p>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        Add via Design Mode
+                        Upload a clear headshot
                       </p>
                     </div>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-2 text-center">
-                    Add your profile photo using Builder.io's design interface
-                  </p>
+                  <div className="mt-3">
+                    <input
+                      id="photo"
+                      name="photo"
+                      type="file"
+                      accept="image/*"
+                      required
+                      className="block w-full text-sm text-muted-foreground file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-primary-foreground hover:file:bg-primary/90"
+                    />
+                  </div>
                 </div>
               </div>
 
