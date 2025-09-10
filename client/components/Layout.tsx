@@ -163,7 +163,7 @@ export default function Layout({ children }: LayoutProps) {
             </DialogTitle>
           </DialogHeader>
           <form
-            action="https://ethiopianhiking.org/api/form-handler.php"
+            action="https://forms.ethiopianhiking.org/api/form-handler.php"
             method="POST"
             encType="multipart/form-data"
             onSubmit={handleDonationSubmit}
