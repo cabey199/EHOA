@@ -62,15 +62,6 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-white rounded border-2 border-dashed border-primary/30 flex items-center justify-center">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4"
-                  src="https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6114dece7f814518aacd2d20d3b9a4c4"
-                  alt="EHOA Logo"
-                  className="w-full object-cover object-center aspect-[1.09] min-h-[20px] min-w-[20px] overflow-hidden my-auto"
-                />
-              </div>
               <span className="text-xl font-bold text-foreground">EHOA</span>
             </Link>
 
