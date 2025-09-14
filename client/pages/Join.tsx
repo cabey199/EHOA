@@ -288,144 +288,21 @@ export default function Join() {
               soon.
             </p>
 
-            <form
-              onSubmit={handleSubmit}
-              action="https://ethiopianhiking2.org/api/form-handler.php"
-              method="POST"
-              encType="multipart/form-data"
-              className="space-y-6"
-            >
-              <input type="hidden" name="formType" value="membership" />
-              <input type="hidden" name="generate_id" value="1" />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
-                    Full Name *
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Enter your full name"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="your.email@example.com"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                  />
-                </div>
+            <div className="space-y-6">
+              <div className="rounded-xl overflow-hidden">
+                <iframe
+                  data-tally-src="https://tally.so/embed/mORrY8?alignLeft=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy"
+                  width="100%"
+                  height="600"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="Become a Member"
+                  className="w-full border-0"
+                ></iframe>
               </div>
-
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-foreground mb-2"
-                >
-                  Phone Number *
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  required
-                  placeholder="+251 912 345 678"
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="participantType"
-                  className="block text-sm font-medium text-foreground mb-2"
-                >
-                  Joining as *
-                </label>
-                <select
-                  id="participantType"
-                  name="participantType"
-                  required
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                >
-                  <option value="individual">Individual</option>
-                  <option value="organization">Organization</option>
-                  <option value="business">Business</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Profile Photo
-                </label>
-                <div className="max-w-xs mx-auto">
-                  <div className="h-40 border-2 border-dashed border-border rounded-lg flex items-center justify-center bg-gray-50">
-                    <div className="text-center">
-                      <User className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                      <p className="text-sm text-muted-foreground">
-                        Upload a clear headshot
-                      </p>
-                    </div>
-                  </div>
-                  <div className="mt-3">
-                    <input
-                      id="photo"
-                      name="photo"
-                      type="file"
-                      accept="image/*"
-                      required
-                      className="block w-full text-sm text-muted-foreground file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-primary-foreground hover:file:bg-primary/90"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-foreground mb-2"
-                >
-                  Message (Optional)
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell us about your interest in EHOA, hiking experience, and how you'd like to contribute to our mission..."
-                  rows={4}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50"
-              >
-                {isSubmitting
-                  ? "Processing Application..."
-                  : "Submit Application"}
-              </button>
-
-              <p className="text-xs text-muted-foreground text-center">
-                By submitting this form, you agree to be contacted by EHOA via
-                email or Telegram. We respect your privacy and will not share
-                your information with third parties.
-              </p>
-            </form>
+            </div>
           </div>
         </div>
       </section>
