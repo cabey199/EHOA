@@ -62,6 +62,12 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa5107a1ca9c745f48757a290d0f7d78d?format=webp&width=64"
+                alt="EHOA Logo"
+                className="h-8 w-8 object-contain"
+                loading="lazy"
+              />
               <span className="text-xl font-bold text-foreground">EHOA</span>
             </Link>
 
