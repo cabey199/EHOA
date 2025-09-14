@@ -210,95 +210,19 @@ export default function Contact() {
                     </p>
                   </div>
                 ) : (
-                  <form
-                    onSubmit={handleSubmit}
-                    action="https://ethiopianhiking2.org/api/form-handler.php"
-                    method="POST"
-                    encType="multipart/form-data"
-                    className="space-y-6"
-                  >
-                    <input type="hidden" name="formType" value="contact" />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-sm font-medium text-foreground mb-2"
-                        >
-                          Name *
-                        </label>
-                        <input
-                          id="name"
-                          name="name"
-                          type="text"
-                          required
-                          placeholder="Your full name"
-                          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-medium text-foreground mb-2"
-                        >
-                          Email *
-                        </label>
-                        <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          placeholder="your.email@example.com"
-                          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Phone Number
-                      </label>
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        placeholder="+251 912 345 678 (optional)"
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Message *
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        placeholder="Tell us how we can help you..."
-                        rows={5}
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none"
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-4 rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50"
-                    >
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </button>
-
-                    <p className="text-xs text-muted-foreground text-center">
-                      We respect your privacy and will only use your information
-                      to respond to your inquiry.
-                    </p>
-                  </form>
+                  <div className="rounded-xl overflow-hidden">
+                    <iframe
+                      data-tally-src="https://tally.so/embed/mKXOJM?alignLeft=1&transparentBackground=1&dynamicHeight=1"
+                      loading="lazy"
+                      width="100%"
+                      height="600"
+                      frameBorder="0"
+                      marginHeight={0}
+                      marginWidth={0}
+                      title="Contact Us"
+                      className="w-full border-0"
+                    ></iframe>
+                  </div>
                 )}
               </div>
             </div>
