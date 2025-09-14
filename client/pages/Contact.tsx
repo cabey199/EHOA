@@ -212,6 +212,7 @@ export default function Contact() {
                 ) : (
                   <div className="rounded-xl overflow-hidden">
                     <iframe
+                      src="https://tally.so/embed/mKXOJM?alignLeft=1&transparentBackground=1&dynamicHeight=1"
                       data-tally-src="https://tally.so/embed/mKXOJM?alignLeft=1&transparentBackground=1&dynamicHeight=1"
                       loading="lazy"
                       width="100%"
