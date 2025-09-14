@@ -33,10 +33,23 @@
 
     <script type="module" src="/client/App.tsx"></script>
     <script>
-      (function(){
-        var d=document, w="https://tally.so/widgets/embed.js";
-        function l(){ if(typeof Tally!=='undefined') Tally.loadEmbeds(); else { var s=d.createElement('script'); s.src=w; s.async=true; s.onload=function(){ Tally.loadEmbeds(); }; d.body.appendChild(s); } }
-        if(d.readyState!=='loading') l(); else d.addEventListener('DOMContentLoaded', l);
+      (function () {
+        var d = document,
+          w = "https://tally.so/widgets/embed.js";
+        function l() {
+          if (typeof Tally !== "undefined") Tally.loadEmbeds();
+          else {
+            var s = d.createElement("script");
+            s.src = w;
+            s.async = true;
+            s.onload = function () {
+              Tally.loadEmbeds();
+            };
+            d.body.appendChild(s);
+          }
+        }
+        if (d.readyState !== "loading") l();
+        else d.addEventListener("DOMContentLoaded", l);
       })();
     </script>
   </body>
