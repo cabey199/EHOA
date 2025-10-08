@@ -289,7 +289,7 @@ export default function Join() {
             </p>
 
             <div className="space-y-6">
-              <div className="rounded-xl overflow-hidden">
+              <div className="rounded-xl overflow-hidden border border-border">
                 <iframe
                   src="https://tally.so/embed/mORrY8?alignLeft=1&transparentBackground=1&dynamicHeight=1&hideTitle=1&hideFooter=1&accentColor=2D862D&fontFamily=Inter"
                   data-tally-src="https://tally.so/embed/mORrY8?alignLeft=1&transparentBackground=1&dynamicHeight=1&hideTitle=1&hideFooter=1&accentColor=2D862D&fontFamily=Inter"
@@ -375,7 +375,7 @@ export default function Join() {
               <ul className="list-none space-y-2 text-muted-foreground">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  Get listed on EHOA�����s official platforms (website, social
+                  Get listed on EHOA���s official platforms (website, social
                   media, promotional campaigns).
                 </li>
                 <li className="flex items-start">
