@@ -162,7 +162,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="rounded-xl overflow-hidden">
             <iframe
               src="https://tally.so/embed/wzVgr1?alignLeft=1&transparentBackground=1&dynamicHeight=1"
-              data-tally-src="https://tally.so/embed/wzVgr1?alignLeft=1&transparentBackground=1&dynamicHeight=1"
+              data-tally-src="https://tally.so/embed/wzVgr1?alignLeft=1&transparentBackground=1&dynamicHeight=1&hideTitle=1&hideFooter=1&accentColor=2D862D&fontFamily=Inter"
               loading="lazy"
               width="100%"
               height="600"
