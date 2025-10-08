@@ -159,7 +159,7 @@ export default function Layout({ children }: LayoutProps) {
               Ethiopian Hiking Organizers Association (EHOA) Donation Form
             </DialogTitle>
           </DialogHeader>
-          <div className="rounded-xl overflow-hidden">
+          <div className="bg-white rounded-xl overflow-hidden border border-border shadow-sm">
             <iframe
               src="https://tally.so/embed/wzVgr1?alignLeft=1&transparentBackground=1&dynamicHeight=1&hideTitle=1&hideFooter=1&accentColor=2D862D&fontFamily=Inter"
               data-tally-src="https://tally.so/embed/wzVgr1?alignLeft=1&transparentBackground=1&dynamicHeight=1&hideTitle=1&hideFooter=1&accentColor=2D862D&fontFamily=Inter"
