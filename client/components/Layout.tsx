@@ -1,4 +1,4 @@
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Mountain, Menu, X, Facebook, Instagram, Send } from "lucide-react";
 import { useState, useEffect } from "react";
 import {
@@ -8,7 +8,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface LayoutProps {
   children: React.ReactNode;
