@@ -13,3 +13,11 @@
   from = "/api/*"
   status = 200
   to = "/.netlify/functions/api/:splat"
+
+# Redirect www to apex (non-WWW)
+[[redirects]]
+  from = "/*"
+  to = "https://ethiopianhiking.org/:splat"
+  status = 301
+  force = true
+  conditions = { Host = ["www.ethiopianhiking.org"] }

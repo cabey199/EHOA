@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mountain, Menu, X, Facebook, Instagram, Send } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+
+import { Link, useLocation } from "react-router-dom";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,6 +18,20 @@ export default function Layout({ children }: LayoutProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [donateOpen, setDonateOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const pathname = location.pathname.endsWith("/") && location.pathname !== "/"
+      ? location.pathname.slice(0, -1)
+      : location.pathname;
+    const canonicalHref = `https://ethiopianhiking.org${pathname}`;
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!link) {
+      link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      document.head.appendChild(link);
+    }
+    link.setAttribute("href", canonicalHref || "https://ethiopianhiking.org/");
+  }, [location.pathname]);
 
   const navigation = [
     { name: "Home", href: "/" },
