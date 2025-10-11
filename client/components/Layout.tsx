@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Mountain, Menu, X, Facebook, Instagram, Send } from "lucide-react";
 import { useState, useEffect } from "react";
 import {
@@ -8,7 +8,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -77,7 +77,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
+            <RouterLink to="/" className="flex items-center space-x-2">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa5107a1ca9c745f48757a290d0f7d78d?format=webp&width=64"
                 alt="EHOA Logo"
@@ -85,13 +85,13 @@ export default function Layout({ children }: LayoutProps) {
                 loading="lazy"
               />
               <span className="text-xl font-bold text-foreground">EHOA</span>
-            </Link>
+            </RouterLink>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="flex items-center space-x-1">
                 {navigation.map((item) => (
-                  <Link
+                  <RouterLink
                     key={item.name}
                     to={item.href}
                     onClick={() =>
@@ -104,7 +104,7 @@ export default function Layout({ children }: LayoutProps) {
                     }`}
                   >
                     {item.name}
-                  </Link>
+                  </RouterLink>
                 ))}
                 <button
                   type="button"
@@ -137,7 +137,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="md:hidden border-t border-border bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
-                <Link
+                <RouterLink
                   key={item.name}
                   to={item.href}
                   onClick={() => {
@@ -151,7 +151,7 @@ export default function Layout({ children }: LayoutProps) {
                   }`}
                 >
                   {item.name}
-                </Link>
+                </RouterLink>
               ))}
               <button
                 type="button"
@@ -220,7 +220,7 @@ export default function Layout({ children }: LayoutProps) {
               <ul className="space-y-2">
                 {navigation.map((item) => (
                   <li key={item.name}>
-                    <Link
+                    <RouterLink
                       to={item.href}
                       onClick={() =>
                         window.scrollTo({ top: 0, behavior: "smooth" })
@@ -228,7 +228,7 @@ export default function Layout({ children }: LayoutProps) {
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {item.name}
-                    </Link>
+                    </RouterLink>
                   </li>
                 ))}
               </ul>
