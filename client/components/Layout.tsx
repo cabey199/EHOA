@@ -1,4 +1,3 @@
-import { Link, useLocation } from "react-router-dom";
 import { Mountain, Menu, X, Facebook, Instagram, Send } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
