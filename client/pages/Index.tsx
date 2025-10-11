@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import {
   ArrowRight,
   Users,
@@ -164,7 +164,7 @@ export default function Index() {
             hiking and camping. Connect with 15+ hiking organizer groups and
             discover the breathtaking landscapes of our homeland.
           </p>
-          <Link
+          <RouterLink
             to="/join"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
@@ -172,7 +172,7 @@ export default function Index() {
               Join Our Community
               <ArrowRight className="ml-2 h-5 w-5 inline" />
             </button>
-          </Link>
+          </RouterLink>
         </div>
       </section>
 
@@ -220,7 +220,7 @@ export default function Index() {
                 of outdoor enthusiasts and professionals committed to promoting
                 the benefits and joys of hiking and camping throughout Ethiopia.
               </p>
-              <Link
+              <RouterLink
                 to="/about"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
@@ -228,7 +228,7 @@ export default function Index() {
                   Learn More About Us
                   <ArrowRight className="ml-2 h-4 w-4 inline" />
                 </button>
-              </Link>
+              </RouterLink>
             </div>
             <div className="relative">
               <img
@@ -324,7 +324,7 @@ export default function Index() {
             adventure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <RouterLink
               to="/join"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
@@ -332,15 +332,15 @@ export default function Index() {
                 Become a Member
                 <ArrowRight className="ml-2 h-5 w-5 inline" />
               </button>
-            </Link>
-            <Link
+            </RouterLink>
+            <RouterLink
               to="/contact"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <button className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
                 Get in Touch
               </button>
-            </Link>
+            </RouterLink>
           </div>
         </div>
       </section>
