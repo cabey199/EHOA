@@ -119,7 +119,7 @@ export default function Layout({ children }: LayoutProps) {
                 {isMobileMenuOpen ? (
                   <X className="h-6 w-6" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <MenuIcon className="h-6 w-6" />
                 )}
               </button>
             </div>
