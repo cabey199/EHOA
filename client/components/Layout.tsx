@@ -1,6 +1,18 @@
-import { Mountain, Menu as MenuIcon, X, Facebook, Instagram, Send } from "lucide-react";
+import {
+  Mountain,
+  Menu as MenuIcon,
+  X,
+  Facebook,
+  Instagram,
+  Send,
+} from "lucide-react";
 import { useState, useEffect } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 
 interface LayoutProps {
@@ -13,11 +25,14 @@ export default function Layout({ children }: LayoutProps) {
   const location = useLocation();
 
   useEffect(() => {
-    const pathname = location.pathname.endsWith("/") && location.pathname !== "/"
-      ? location.pathname.slice(0, -1)
-      : location.pathname;
+    const pathname =
+      location.pathname.endsWith("/") && location.pathname !== "/"
+        ? location.pathname.slice(0, -1)
+        : location.pathname;
     const canonicalHref = `https://ethiopianhiking.org${pathname}`;
-    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    let link = document.querySelector(
+      'link[rel="canonical"]',
+    ) as HTMLLinkElement | null;
     if (!link) {
       link = document.createElement("link");
       link.setAttribute("rel", "canonical");
