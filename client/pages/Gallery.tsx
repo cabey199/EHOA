@@ -29,7 +29,7 @@ export default function Gallery() {
     },
     {
       id: 4,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0c646b9e969942d890248b00e6a52540?alt=media&token=ab7e8935-4a45-4d81-aa2d-f5964ebf027e&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0c646b9e969942d890248b00e6a52540?format=webp&width=800",
       alt: "Mountain vista view",
     },
     {
@@ -44,7 +44,7 @@ export default function Gallery() {
     },
     {
       id: 7,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F2d2bf2261d4e41bbb714de52b04b3937?alt=media&token=83f0131c-39c6-47ac-82dc-e5bf9369a001&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F2d2bf2261d4e41bbb714de52b04b3937?format=webp&width=800",
       alt: "Scenic plateau",
     },
     {
@@ -54,12 +54,12 @@ export default function Gallery() {
     },
     {
       id: 9,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F82e4e5f754ac4be4b659b1fef22b1cfa?alt=media&token=1264af17-75e9-4024-bbc7-3bd1a9dd46d9&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F82e4e5f754ac4be4b659b1fef22b1cfa?format=webp&width=800",
       alt: "Hiking through nature",
     },
     {
       id: 10,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F1a0f38232bd44395a732897188495283?alt=media&token=9e9d8843-cdb3-445c-8eba-a36be71c6ba5&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F1a0f38232bd44395a732897188495283?format=webp&width=800",
       alt: "Adventure in the mountains",
     },
     {
@@ -184,12 +184,12 @@ export default function Gallery() {
     },
     {
       id: 35,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F96c241382b0c4edd8040852d9890090d?alt=media&token=b1fa59ab-c65e-4fde-9e39-fe56cbfac19c&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F96c241382b0c4edd8040852d9890090d?format=webp&width=800",
       alt: "Hiking group adventure",
     },
     {
       id: 36,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F5c6f649edce44ea4b45241acadcc897b?alt=media&token=2780b303-b809-4597-b858-351b59cdc96e&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F5c6f649edce44ea4b45241acadcc897b?format=webp&width=800",
       alt: "Mountain team hiking",
     },
     {
@@ -204,17 +204,17 @@ export default function Gallery() {
     },
     {
       id: 39,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Ffa5ba8e24333423aa89bd6d90634efb3?alt=media&token=c723569e-e20c-449f-aaf0-ca8a8d92881c&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Ffa5ba8e24333423aa89bd6d90634efb3?format=webp&width=800",
       alt: "Landscape exploration",
     },
     {
       id: 40,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F255bc4c34f314e51bbd0c58c65f65760?alt=media&token=f4b12db1-3a61-4d6c-b173-896ef874c7ad&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F255bc4c34f314e51bbd0c58c65f65760?format=webp&width=800",
       alt: "Highland adventure",
     },
     {
       id: 41,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6368b4f58b8a431fa2c0d7e6f488531c?alt=media&token=2f94bc5d-a237-4ad2-9bbf-7de6ea4210ef&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6368b4f58b8a431fa2c0d7e6f488531c?format=webp&width=800",
       alt: "Mountain wildlife",
     },
     {
@@ -224,7 +224,7 @@ export default function Gallery() {
     },
     {
       id: 43,
-      src: "https://cdn.builder.io/o/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F7206fcc348eb4c0283380286cd80b17d?alt=media&token=a67a423e-466a-44a4-b6a7-fe6fa6dadc11&apiKey=06dfe1409ccc42b5babece67b54a91f6",
+      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F7206fcc348eb4c0283380286cd80b17d?format=webp&width=800",
       alt: "Alpine landscape",
     },
     {
