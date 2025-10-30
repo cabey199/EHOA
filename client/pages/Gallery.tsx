@@ -28,11 +28,6 @@ export default function Gallery() {
       alt: "Hiking in volcanic landscape",
     },
     {
-      id: 4,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0c646b9e969942d890248b00e6a52540?format=webp&width=800",
-      alt: "Mountain vista view",
-    },
-    {
       id: 5,
       src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F24f218013fb54c8b8db6079bcb9d7573?format=webp&width=800",
       alt: "Sunset hiking adventure",
@@ -43,24 +38,9 @@ export default function Gallery() {
       alt: "Mountain climbing",
     },
     {
-      id: 7,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F2d2bf2261d4e41bbb714de52b04b3937?format=webp&width=800",
-      alt: "Scenic plateau",
-    },
-    {
       id: 8,
       src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Ff145dc03fc6b475395cc3d346dee016e?format=webp&width=800",
       alt: "Mountain peak experience",
-    },
-    {
-      id: 9,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F82e4e5f754ac4be4b659b1fef22b1cfa?format=webp&width=800",
-      alt: "Hiking through nature",
-    },
-    {
-      id: 10,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F1a0f38232bd44395a732897188495283?format=webp&width=800",
-      alt: "Adventure in the mountains",
     },
     {
       id: 11,
@@ -183,16 +163,6 @@ export default function Gallery() {
       alt: "Scenic mountain trail",
     },
     {
-      id: 35,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F96c241382b0c4edd8040852d9890090d?format=webp&width=800",
-      alt: "Hiking group adventure",
-    },
-    {
-      id: 36,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F5c6f649edce44ea4b45241acadcc897b?format=webp&width=800",
-      alt: "Mountain team hiking",
-    },
-    {
       id: 37,
       src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F05c176e783b04146b48ec63964061dbb?format=webp&width=800",
       alt: "Natural landscape",
@@ -203,29 +173,9 @@ export default function Gallery() {
       alt: "Mountain adventure",
     },
     {
-      id: 39,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Ffa5ba8e24333423aa89bd6d90634efb3?format=webp&width=800",
-      alt: "Landscape exploration",
-    },
-    {
-      id: 40,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F255bc4c34f314e51bbd0c58c65f65760?format=webp&width=800",
-      alt: "Highland adventure",
-    },
-    {
-      id: 41,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F6368b4f58b8a431fa2c0d7e6f488531c?format=webp&width=800",
-      alt: "Mountain wildlife",
-    },
-    {
       id: 42,
       src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa57e4df0c7bc478db6bd34936334e3cf?format=webp&width=800",
       alt: "Group hiking experience",
-    },
-    {
-      id: 43,
-      src: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F7206fcc348eb4c0283380286cd80b17d?format=webp&width=800",
-      alt: "Alpine landscape",
     },
     {
       id: 44,
