@@ -575,12 +575,12 @@ export default function About() {
               >
                 <div className="flex flex-col h-full">
                   {/* Logo */}
-                  <div className="w-full h-24 bg-gradient-to-br from-emerald-100 to-green-100 rounded-lg flex items-center justify-center mb-4 border border-emerald-200 overflow-hidden">
+                  <div className="w-full h-32 bg-gradient-to-br from-emerald-100 to-green-100 rounded-lg flex items-center justify-center mb-4 border border-emerald-200 overflow-hidden">
                     {partner.logo ? (
                       <img
                         src={partner.logo}
                         alt={`${partner.name} logo`}
-                        className="h-full w-full object-contain p-2"
+                        className="max-h-28 max-w-44 object-contain"
                         loading="lazy"
                       />
                     ) : (
