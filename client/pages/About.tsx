@@ -521,6 +521,64 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Our Partners */}
+      <section className="py-20 bg-emerald-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Partner Organizations
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              A network of 15+ dedicated hiking groups united to promote adventure
+              and exploration across Ethiopia
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {partners.map((partner, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-emerald-100/50 hover:border-emerald-300/50"
+              >
+                <div className="flex flex-col h-full">
+                  {/* Logo Placeholder */}
+                  <div className="w-full h-24 bg-gradient-to-br from-emerald-100 to-green-100 rounded-lg flex items-center justify-center mb-4 border border-emerald-200">
+                    <div className="text-center">
+                      <div className="text-emerald-600 text-xs font-semibold">Logo</div>
+                    </div>
+                  </div>
+
+                  {/* Organization Name */}
+                  <h3 className="text-lg font-semibold text-foreground mb-4 flex-grow">
+                    {partner.name}
+                  </h3>
+
+                  {/* Contact Info */}
+                  <div className="flex items-center space-x-3 pt-4 border-t border-emerald-100">
+                    <Phone className="h-5 w-5 text-emerald-600 flex-shrink-0" />
+                    <a
+                      href={`tel:${partner.phone}`}
+                      className="text-emerald-700 hover:text-emerald-900 font-medium text-sm"
+                    >
+                      {partner.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-white rounded-xl p-8 border-l-4 border-emerald-600">
+            <p className="text-muted-foreground text-center">
+              <strong className="text-foreground">Note:</strong> To connect with any of our partner
+              organizations, reach out directly via the contact numbers provided.
+              Together, we're building a strong community of hiking enthusiasts
+              dedicated to exploring Ethiopia's natural beauty.
+            </p>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
