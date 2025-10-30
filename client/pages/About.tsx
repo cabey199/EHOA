@@ -184,7 +184,11 @@ export default function About() {
       logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0d326c58a696433a8871db06905ee679?format=webp&width=800",
     },
     { name: "Seleme Hiking", phone: "+251974095116" },
-    { name: "Savana Hiking", phone: "+251904149468" },
+    {
+      name: "Savana Hiking",
+      phone: "+251904149468",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fd687c4300d6e4091a97828744bfdf224?format=webp&width=800",
+    },
     { name: "DIGO hiking", phone: "+251919910104" },
   ];
 
