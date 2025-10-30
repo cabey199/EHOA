@@ -1,5 +1,14 @@
 import Layout from "@/components/Layout";
-import { Users, Calendar, Target, Heart, MapPin, Award, Phone, ExternalLink } from "lucide-react";
+import {
+  Users,
+  Calendar,
+  Target,
+  Heart,
+  MapPin,
+  Award,
+  Phone,
+  ExternalLink,
+} from "lucide-react";
 
 export default function About() {
   const milestones = [
@@ -566,8 +575,8 @@ export default function About() {
               Our Partner Organizations
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A network of 15+ dedicated hiking groups united to promote adventure
-              and exploration across Ethiopia
+              A network of 15+ dedicated hiking groups united to promote
+              adventure and exploration across Ethiopia
             </p>
           </div>
 
@@ -589,7 +598,9 @@ export default function About() {
                       />
                     ) : (
                       <div className="text-center">
-                        <div className="text-emerald-600 text-xs font-semibold">Logo</div>
+                        <div className="text-emerald-600 text-xs font-semibold">
+                          Logo
+                        </div>
                       </div>
                     )}
                   </div>
@@ -616,10 +627,11 @@ export default function About() {
 
           <div className="mt-12 bg-white rounded-xl p-8 border-l-4 border-emerald-600">
             <p className="text-muted-foreground text-center">
-              <strong className="text-foreground">Note:</strong> To connect with any of our partner
-              organizations, reach out directly via the contact numbers provided.
-              Together, we're building a strong community of hiking enthusiasts
-              dedicated to exploring Ethiopia's natural beauty.
+              <strong className="text-foreground">Note:</strong> To connect with
+              any of our partner organizations, reach out directly via the
+              contact numbers provided. Together, we're building a strong
+              community of hiking enthusiasts dedicated to exploring Ethiopia's
+              natural beauty.
             </p>
           </div>
         </div>
