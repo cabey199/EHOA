@@ -198,7 +198,11 @@ export default function About() {
       phone: "+251904149468",
       logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fd687c4300d6e4091a97828744bfdf224?format=webp&width=800",
     },
-    { name: "DIGO hiking", phone: "+251919910104" },
+    {
+      name: "DIGO hiking",
+      phone: "+251919910104",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fe6b346e162bf4ddeb4835fccde4c25cc?format=webp&width=800",
+    },
   ];
 
   return (
