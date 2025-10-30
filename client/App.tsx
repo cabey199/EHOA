@@ -5,6 +5,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Join from "./pages/Join";
 import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import ThankYou from "./pages/ThankYou";
 
@@ -13,6 +14,7 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/about" element={<About />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="/join" element={<Join />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/thank-you" element={<ThankYou />} />
