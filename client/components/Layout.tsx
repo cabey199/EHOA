@@ -44,6 +44,7 @@ export default function Layout({ children }: LayoutProps) {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Join & Support", href: "/join" },
     { name: "Contact", href: "/contact" },
   ];
