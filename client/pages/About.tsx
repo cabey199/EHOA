@@ -139,18 +139,50 @@ export default function About() {
   ];
 
   const partners = [
-    { name: "Guzo Adwa Hiking Events", phone: "+251942545470" },
+    {
+      name: "Guzo Adwa Hiking Events",
+      phone: "+251942545470",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0482021342654e94ac73827d31403751?format=webp&width=800",
+    },
     { name: "Gara Hiking", phone: "+251946366918" },
     { name: "Addis Hiking", phone: "+251970116424" },
-    { name: "Aye Hiking", phone: "+251926665078" },
-    { name: "Gojo Hiking", phone: "+251912878684" },
+    {
+      name: "Aye Hiking",
+      phone: "+251926665078",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F452b9f716cd94b64b735c95db273346a?format=webp&width=800",
+    },
+    {
+      name: "Gojo Hiking",
+      phone: "+251912878684",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fa4cba8be57ef4ca6aa5f2b7db2797b60?format=webp&width=800",
+    },
     { name: "Alem Tour and Events", phone: "+251941432513" },
-    { name: "Ethio Hiking Community", phone: "+251913857494" },
-    { name: "Campinn Hiking Tour and Events", phone: "+251968676677" },
+    {
+      name: "Ethio Hiking Community",
+      phone: "+251913857494",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fd78f7e83b68c41659918a965a2e3794e?format=webp&width=800",
+    },
+    {
+      name: "Campinn Hiking Tour and Events",
+      phone: "+251968676677",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F8095e808dd5c46368292c5664db165f6?format=webp&width=800",
+    },
     { name: "Visit Kembata", phone: "+251934784404" },
-    { name: "Hasat Hiking", phone: "+251943194836" },
-    { name: "Royal hiking", phone: "+251911680168" },
-    { name: "RiseUp Hiking", phone: "+251911784230" },
+    {
+      name: "Hasat Hiking",
+      phone: "+251943194836",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fbafd0ae3fd71481084ef5e55a1f34878?format=webp&width=800",
+    },
+    {
+      name: "Royal hiking",
+      phone: "+251911680168",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fbbed1868038d4ea7a0b32d13ef0e6308?format=webp&width=800",
+    },
+    {
+      name: "RiseUp Hiking",
+      phone: "+251911784230",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0d326c58a696433a8871db06905ee679?format=webp&width=800",
+    },
     { name: "Seleme Hiking", phone: "+251974095116" },
     { name: "Savana Hiking", phone: "+251904149468" },
     { name: "DIGO hiking", phone: "+251919910104" },
