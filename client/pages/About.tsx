@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { Users, Calendar, Target, Heart, MapPin, Award } from "lucide-react";
+import { Users, Calendar, Target, Heart, MapPin, Award, Phone, ExternalLink } from "lucide-react";
 
 export default function About() {
   const milestones = [
@@ -136,6 +136,24 @@ export default function About() {
     { number: "10", label: "Founding Members" },
     { number: "2+ Years", label: "Years Active" },
     { number: "All Ethiopia", label: "Regions Covered" },
+  ];
+
+  const partners = [
+    { name: "Guzo Adwa Hiking Events", phone: "+251942545470" },
+    { name: "Gara Hiking", phone: "+251946366918" },
+    { name: "Addis Hiking", phone: "+251970116424" },
+    { name: "Aye Hiking", phone: "+251926665078" },
+    { name: "Gojo Hiking", phone: "+251912878684" },
+    { name: "Alem Tour and Events", phone: "+251941432513" },
+    { name: "Ethio Hiking Community", phone: "+251913857494" },
+    { name: "Campinn Hiking Tour and Events", phone: "+251968676677" },
+    { name: "Visit Kembata", phone: "+251934784404" },
+    { name: "Hasat Hiking", phone: "+251943194836" },
+    { name: "Royal hiking", phone: "+251911680168" },
+    { name: "RiseUp Hiking", phone: "+251911784230" },
+    { name: "Seleme Hiking", phone: "+251974095116" },
+    { name: "Savana Hiking", phone: "+251904149468" },
+    { name: "DIGO hiking", phone: "+251919910104" },
   ];
 
   return (
