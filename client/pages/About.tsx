@@ -574,11 +574,20 @@ export default function About() {
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-emerald-100/50 hover:border-emerald-300/50"
               >
                 <div className="flex flex-col h-full">
-                  {/* Logo Placeholder */}
-                  <div className="w-full h-24 bg-gradient-to-br from-emerald-100 to-green-100 rounded-lg flex items-center justify-center mb-4 border border-emerald-200">
-                    <div className="text-center">
-                      <div className="text-emerald-600 text-xs font-semibold">Logo</div>
-                    </div>
+                  {/* Logo */}
+                  <div className="w-full h-24 bg-gradient-to-br from-emerald-100 to-green-100 rounded-lg flex items-center justify-center mb-4 border border-emerald-200 overflow-hidden">
+                    {partner.logo ? (
+                      <img
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        className="h-full w-full object-contain p-2"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="text-center">
+                        <div className="text-emerald-600 text-xs font-semibold">Logo</div>
+                      </div>
+                    )}
                   </div>
 
                   {/* Organization Name */}
