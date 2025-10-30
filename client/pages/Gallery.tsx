@@ -270,15 +270,15 @@ export default function Gallery() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30">
+      <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-green-50 to-emerald-100">
         {/* Page Header */}
-        <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-background border-b border-border/50 py-12 md:py-16">
+        <div className="bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-600 border-b border-emerald-700/20 py-12 md:py-16 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Photo Gallery
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-emerald-50 max-w-2xl mx-auto">
                 Explore the stunning landscapes and hiking adventures across
                 Ethiopia through our community's lens
               </p>
@@ -293,15 +293,19 @@ export default function Gallery() {
               <div
                 key={image.id}
                 onClick={() => setSelectedImageId(image.id)}
-                className="group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer border border-emerald-200/50"
               >
                 <img
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
+                  onError={(e) => {
+                    const img = e.target as HTMLImageElement;
+                    img.style.backgroundColor = "#d1fae5";
+                  }}
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/30 from-0% via-transparent to-transparent group-hover:from-emerald-900/50 transition-colors duration-300" />
               </div>
             ))}
           </div>
@@ -310,7 +314,7 @@ export default function Gallery() {
         {/* Lightbox Modal */}
         {selectedImageId !== null && (
           <div
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={() => setSelectedImageId(null)}
             onKeyDown={handleKeyDown}
             tabIndex={0}
@@ -322,7 +326,7 @@ export default function Gallery() {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedImageId(null)}
-                className="absolute -top-12 -right-12 md:top-4 md:right-4 p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors z-10"
+                className="absolute -top-12 -right-12 md:top-4 md:right-4 p-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/40 text-white transition-colors z-10"
                 aria-label="Close"
               >
                 <X className="h-6 w-6" />
@@ -332,7 +336,7 @@ export default function Gallery() {
               {selectedIndex > 0 && (
                 <button
                   onClick={handlePrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/40 text-white transition-colors"
                   aria-label="Previous image"
                 >
                   <ChevronLeft className="h-6 w-6" />
@@ -345,9 +349,13 @@ export default function Gallery() {
                   <img
                     src={selectedImage.src}
                     alt={selectedImage.alt}
-                    className="max-w-full max-h-[80vh] object-contain rounded-lg"
+                    className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                    onError={(e) => {
+                      const img = e.target as HTMLImageElement;
+                      img.style.backgroundColor = "#1f2937";
+                    }}
                   />
-                  <p className="mt-4 text-white/70 text-sm">
+                  <p className="mt-4 text-emerald-200 text-sm">
                     {selectedIndex + 1} of {images.length}
                   </p>
                 </div>
@@ -357,7 +365,7 @@ export default function Gallery() {
               {selectedIndex < images.length - 1 && (
                 <button
                   onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/40 text-white transition-colors"
                   aria-label="Next image"
                 >
                   <ChevronRight className="h-6 w-6" />
