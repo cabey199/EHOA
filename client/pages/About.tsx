@@ -153,7 +153,11 @@ export default function About() {
       phone: "+251942545470",
       logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0482021342654e94ac73827d31403751?format=webp&width=800",
     },
-    { name: "Gara Hiking", phone: "+251946366918" },
+    {
+      name: "Gara Hiking",
+      phone: "+251946366918",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F3f171b95483c4b90836f19b5f32f3cd0?format=webp&width=800",
+    },
     { name: "Addis Hiking", phone: "+251970116424" },
     {
       name: "Aye Hiking",
@@ -192,7 +196,11 @@ export default function About() {
       phone: "+251911784230",
       logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F0d326c58a696433a8871db06905ee679?format=webp&width=800",
     },
-    { name: "Seleme Hiking", phone: "+251974095116" },
+    {
+      name: "Seleme Hiking",
+      phone: "+251974095116",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fe9ce215fb1c24b9781de9e4b109b8217?format=webp&width=800",
+    },
     {
       name: "Savana Hiking",
       phone: "+251904149468",
@@ -203,6 +211,12 @@ export default function About() {
       phone: "+251919910104",
       logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2Fe6b346e162bf4ddeb4835fccde4c25cc?format=webp&width=800",
     },
+    {
+      name: "Tobiya Hiking",
+      phone: "+251912990244",
+      logo: "https://cdn.builder.io/api/v1/image/assets%2F06dfe1409ccc42b5babece67b54a91f6%2F470db41ed97e463f9016dd5f0235971a?format=webp&width=800",
+    },
+    { name: "Mulu Chereqa Hiking", phone: "+251910072066" },
   ];
 
   return (
